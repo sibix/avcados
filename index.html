@@ -1,0 +1,1743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AVCADO'S — Multidisciplinary Consulting, Engineering & Healthcare | India & UAE</title>
+<meta name="description" content="AVCADO'S is a multidisciplinary consulting, project management, engineering, healthcare and facility management organization serving organizations across India and the UAE.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+	<link rel="icon" href="https://www.avcados.org/wp-content/uploads/2020/03/cropped-Site-Icon-1-32x32.png" sizes="32x32" />
+<script src="https://unpkg.com/lucide@latest"></script>
+<style>
+
+:root{
+  --paper:#FFFFFF; --paper-2:#F1F6F2; --card:#FFFFFF; --card-2:#F7FAF8;
+  --ink:#0E2318; --ink-2:#2C4136; --muted:#61726A;
+  --green-950:#06231A; --green-900:#0A3325; --green-800:#0E3B2C;
+  --green-700:#155A41; --green-600:#1E7A55; --green-500:#2F9B6E;
+  --accent:#C8DE6A; --err:#B3402E;
+  --line:rgba(14,35,24,.13); --line-l:rgba(255,255,255,.16);
+  --sans:'Inter',-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+  --head:'Inter',-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,monospace;
+  --ease:cubic-bezier(.22,.61,.2,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:100px}
+body{font-family:var(--sans);background:var(--paper);color:var(--ink);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;background:none;border:none;cursor:pointer;color:inherit}
+ul,ol{list-style:none}
+::selection{background:var(--green-800);color:#fff}
+::-webkit-scrollbar{width:11px}
+::-webkit-scrollbar-track{background:#EDF3EF}
+::-webkit-scrollbar-thumb{background:#A9BFB2;border-radius:6px;border:3px solid #EDF3EF}
+:focus-visible{outline:2px solid var(--green-600);outline-offset:3px}
+
+.container{max-width:1280px;margin:0 auto;padding:0 clamp(20px,4vw,48px)}
+.skip{position:fixed;left:-999px;top:8px;z-index:999;background:var(--green-900);color:#fff;padding:10px 16px;border-radius:6px;}
+.skip:focus{left:8px}
+
+/* ============ UTILITIES ============ */
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font:500 11px var(--mono);letter-spacing:.22em;text-transform:uppercase;color:var(--green-700)}
+.eyebrow::before{content:"✦";font-size:13px;line-height:1;color:var(--green-500)}
+.dark .eyebrow{color:var(--accent)}
+.dark .eyebrow::before{color:var(--accent)}
+.sec-title{font-family:var(--head);font-weight:640;font-size:clamp(1.85rem,3.4vw,2.8rem);line-height:1.1;letter-spacing:-.03em;margin-top:18px}
+.sec-title em{font-style:italic;color:var(--green-700)}
+.dark .sec-title em{color:var(--accent)}
+.sec-head .lede{max-width:620px;color:var(--ink-2);font-size:16.5px;margin-top:16px}
+.sec-head.split{display:grid;grid-template-columns:1.25fr .85fr;gap:48px;align-items:end}
+.sec-head.split .side{color:var(--muted);font-size:15px;padding-bottom:6px;border-left:1px solid var(--line);padding-left:22px}
+.dark .sec-head.split .side{border-left-color:var(--line-l);color:rgba(255,255,255,.62)}
+
+.duo{position:relative;overflow:hidden;background:var(--green-950)}
+.duo img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.07) brightness(.97)}
+.duo::before{content:"";position:absolute;inset:0;background:var(--green-600);mix-blend-mode:color;opacity:.92;pointer-events:none}
+.duo::after{content:"";position:absolute;inset:0;background:rgba(10,35,23,.1);pointer-events:none}
+
+.btn{display:inline-flex;align-items:center;gap:12px;padding:15px 26px;font:600 12.5px/1 var(--sans);letter-spacing:.08em;text-transform:uppercase;border-radius:10px;transition:background .35s var(--ease),color .35s var(--ease),border-color .35s var(--ease);white-space:nowrap}
+.btn .bl{position:relative;overflow:hidden;display:block;height:1.2em}
+.btn .bl span{display:block;transition:transform .4s var(--ease)}
+.btn .bl span:last-child{position:absolute;top:100%;left:0}
+.btn:hover .bl span{transform:translateY(-100%)}
+.btn svg{width:16px;height:16px;transition:transform .35s var(--ease)}
+.btn:hover svg{transform:translateX(4px)}
+.btn-solid{background:var(--green-800);color:#fff}
+.btn-solid:hover{background:var(--green-950)}
+.btn-ghost{border:1px solid var(--ink);color:var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:#fff}
+.btn-accent{background:var(--accent);color:var(--green-950)}
+.btn-accent:hover{background:#fff}
+.btn-ghost-l{border:1px solid rgba(255,255,255,.55);color:#fff}
+.btn-ghost-l:hover{border-color:#fff;background:rgba(255,255,255,.1)}
+.btn-sm{padding:11px 18px;font-size:11.5px}
+
+[data-reveal]{opacity:0;transform:translateY(26px);transition:opacity .9s var(--ease),transform .9s var(--ease);transition-delay:var(--d,0s)}
+[data-reveal].in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
+  [data-reveal]{opacity:1;transform:none}
+}
+
+/* ============ TOP BAR ============ */
+.topbar{background:var(--green-950);color:rgba(255,255,255,.82);font:400 11.5px var(--sans)}
+.topbar-in{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:8px 20px;}
+.topbar span,.topbar a{display:inline-flex;align-items:center;gap:7px}
+.topbar svg{width:12px;height:12px;color:var(--accent)}
+.topbar a:hover{color:var(--accent)}
+.topbar .grp{display:flex;gap:22px}
+
+/* ============ HEADER ============ */
+.header{position:sticky;top:0;z-index:100;background:var(--paper);border-bottom:1px solid var(--line);transition:box-shadow .3s}
+.header.scrolled{box-shadow:0 10px 30px -18px rgba(10,35,23,.3)}
+.header-in{display:flex;align-items:center;gap:22px;height:80px;transition:height .3s var(--ease)}
+.header.scrolled .header-in{height:64px}
+
+.logo{display:flex;align-items:center;flex-shrink:0}
+.logo-img{height:40px;width:auto;display:block;transition:height .3s var(--ease)}
+.header.scrolled .logo-img{height:32px}
+.logo-fb{display:none;flex-direction:column;gap:4px}
+.logo.no-img .logo-fb{display:flex}
+.fb-word{display:inline-flex;align-items:center;font:800 21px/1 var(--head);letter-spacing:.01em;color:var(--green-900)}
+.fb-avo{width:15px;height:20px;margin:0 1px}
+.logo-fb small{font:500 7.5px var(--mono);letter-spacing:.3em;color:var(--muted)}
+
+.nav-list{display:flex;align-items:center;gap:2px;margin-left:auto}
+.nav-list>li{position:static}
+.nav-list>li.has-drop{position:relative}
+.nav-list>li>a{display:flex;align-items:center;gap:5px;padding:10px 13px;font:600 13.5px/1 var(--sans);letter-spacing:-.01em;color:var(--ink-2);white-space:nowrap;position:relative;transition:color .3s}
+.nav-list>li>a svg{width:13px;height:13px;transition:transform .3s}
+.nav-list>li:hover>a,.nav-list>li>a.active{color:var(--green-800)}
+.nav-list>li:hover>a svg{transform:rotate(180deg)}
+.nav-list>li>a::after{content:"";position:absolute;left:13px;right:13px;bottom:4px;height:2px;background:var(--green-600);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease)}
+.nav-list>li:hover>a::after,.nav-list>li>a.active::after{transform:scaleX(1)}
+
+/* Small dropdowns (About Us / Industries) */
+.drop{position:absolute;top:calc(100% + 14px);left:0;z-index:60;min-width:250px;background:var(--paper);border:1px solid var(--line);border-radius:12px;box-shadow:0 28px 56px -22px rgba(6,35,23,.28);padding:8px;opacity:0;visibility:hidden;transform:translateY(10px);transition:.32s var(--ease)}
+.has-drop:hover .drop,.has-drop:focus-within .drop{opacity:1;visibility:visible;transform:none}
+.drop-link{display:flex;align-items:center;gap:11px;padding:10px 13px;border-radius:8px;font:500 13.5px/1.3 var(--sans);color:var(--ink-2);transition:background .25s,color .25s}
+.drop-link::before{content:"✦";font-size:9px;color:var(--green-500);transition:color .25s}
+.drop-link:hover{background:var(--paper-2);color:var(--green-800)}
+.drop-link:hover::before{color:var(--green-600)}
+
+/* MEGA MENU (Services) */
+.mega{position:absolute;top:100%;left:0;right:0;z-index:60;background:var(--paper);border-top:1px solid var(--line);box-shadow:0 34px 60px -26px rgba(6,35,23,.3);opacity:0;visibility:hidden;transform:translateY(10px);transition:.35s var(--ease)}
+.has-mega:hover .mega,.has-mega:focus-within .mega{opacity:1;visibility:visible;transform:none}
+.mega-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px 0;padding:30px 0 8px}
+.mega-cell{padding:4px 26px 20px;border-left:1px solid var(--line)}
+.mega-cell:nth-child(4n+1){border-left:none;padding-left:0}
+.mc-head{display:flex;align-items:center;gap:11px;margin-bottom:11px}
+.mc-ic{width:34px;height:34px;border-radius:10px;background:var(--paper-2);display:grid;place-items:center;color:var(--green-700);flex-shrink:0;transition:.3s}
+.mc-ic svg{width:16px;height:16px}
+.mc-head b{font:650 14.5px var(--head);letter-spacing:-.01em;color:var(--ink);transition:color .3s}
+.mc-head:hover b{color:var(--green-800)}
+.mc-head:hover .mc-ic{background:var(--green-800);color:#fff}
+.mc-links a{display:flex;gap:9px;padding:5px 0;font:400 13.5px var(--sans);color:var(--ink-2);transition:.25s}
+.mc-links a::before{content:"✦";font-size:8px;color:var(--green-500);padding-top:4px}
+.mc-links a:hover{color:var(--green-800);padding-left:5px}
+.mega-promo{margin:4px 0 20px;border-radius:12px;background:var(--green-950);color:#fff;padding:22px 24px;display:flex;flex-direction:column;gap:8px;position:relative;overflow:hidden;transition:.35s var(--ease)}
+.mega-promo:hover{background:var(--green-800)}
+.mp-star{font-size:16px;color:var(--accent)}
+.mp-t{font:650 16px var(--head);letter-spacing:-.01em}
+.mp-s{font-size:12.5px;color:rgba(255,255,255,.65);line-height:1.5}
+.mp-a{position:absolute;right:18px;bottom:18px;width:36px;height:36px;border-radius:10px;border:1px solid rgba(255,255,255,.3);display:grid;place-items:center;transition:.3s}
+.mp-a svg{width:15px;height:15px}
+.mega-promo:hover .mp-a{background:var(--accent);color:var(--green-950);border-color:var(--accent)}
+.mega-foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;border-top:1px solid var(--line);padding:15px 0 24px;font:500 11px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.mega-foot a{display:inline-flex;align-items:center;gap:9px;color:var(--green-700);font:600 12px var(--sans);letter-spacing:.1em}
+.mega-foot a svg{width:14px;height:14px;transition:transform .3s}
+.mega-foot a:hover svg{transform:translateX(4px)}
+
+.burger{display:none;width:44px;height:44px;flex-direction:column;justify-content:center;align-items:center;gap:6px;border-radius:10px}
+.burger span{width:24px;height:2px;background:var(--ink);transition:.35s var(--ease)}
+.burger.active span:first-child{transform:translateY(4px) rotate(45deg)}
+.burger.active span:last-child{transform:translateY(-4px) rotate(-45deg)}
+
+/* ============ MOBILE DRAWER ============ */
+.mm{position:fixed;inset:0;z-index:200;background:var(--green-950);color:#fff;display:flex;flex-direction:column;opacity:0;visibility:hidden;transition:.45s var(--ease);overflow-y:auto}
+.mm.open{opacity:1;visibility:visible}
+.mm-head{display:flex;justify-content:space-between;align-items:center;padding:18px clamp(22px,6vw,48px);border-bottom:1px solid var(--line-l);position:sticky;top:0;background:var(--green-950);z-index:2}
+.mm-title{font:500 11px var(--mono);letter-spacing:.24em;text-transform:uppercase;color:var(--accent)}
+.mm-close{width:44px;height:44px;display:grid;place-items:center;color:#fff;border:1px solid var(--line-l);border-radius:10px}
+.mm-close svg{width:22px;height:22px}
+.mm-nav{flex:1;padding:14px clamp(22px,6vw,48px) 26px}
+.mm-nav>*{border-bottom:1px solid var(--line-l);opacity:0;transform:translateY(14px);transition:.5s var(--ease)}
+.mm.open .mm-nav>*{opacity:1;transform:none}
+.mm-link{display:block;padding:15px 0;font:600 1.22rem var(--head);letter-spacing:-.02em;color:#fff}
+.mm-parent{display:flex;justify-content:space-between;align-items:center;width:100%;padding:15px 0;font:600 1.22rem var(--head);letter-spacing:-.02em;color:#fff}
+.mm-parent svg{width:18px;height:18px;color:var(--accent);transition:transform .35s var(--ease)}
+.mm-group.open .mm-parent svg{transform:rotate(45deg)}
+.mm-sub{max-height:0;overflow:hidden;transition:max-height .5s var(--ease)}
+.mm-sub a{display:flex;align-items:center;gap:12px;padding:8.5px 0;font:500 15px var(--sans);color:rgba(255,255,255,.78)}
+.mm-sub a::before{content:"✦";font-size:9px;color:var(--green-500)}
+.mm-sub a:hover{color:var(--accent)}
+.mm-cat{font:650 15px var(--head)!important;color:#fff!important;padding:13px 0 5px!important}
+.mm-cat::before{color:var(--accent)!important;font-size:11px!important}
+.mm-sublink{font-size:14px!important;color:rgba(255,255,255,.66)!important;padding:6px 0 6px 21px!important}
+.mm-sublink::before{opacity:.55}
+.mm-foot{padding:22px clamp(22px,6vw,48px) 34px;border-top:1px solid var(--line-l);display:flex;flex-direction:column;gap:10px;font-size:13.5px;color:rgba(255,255,255,.72)}
+.mm-foot .btn{align-self:flex-start;margin-top:8px}
+
+/* ============ HERO ============ */
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;color:#fff;overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.08);transform:scale(1.06);will-change:transform}
+.hero-bg::before{content:"";position:absolute;inset:0;background:var(--green-700);mix-blend-mode:color;opacity:.94}
+.hero-bg::after{content:"";position:absolute;inset:0;background:rgba(6,23,18,.6)}
+.hero-noise{position:absolute;inset:0;z-index:2;opacity:.06;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E")}
+.hero-inner{position:relative;z-index:3;flex:1;display:flex;flex-direction:column;justify-content:center;padding-top:clamp(56px,8vh,96px);padding-bottom:clamp(78px,11vh,126px)}
+.hero .eyebrow{color:var(--accent);opacity:0;transform:translateY(14px);transition:.9s var(--ease) .1s}
+body.loaded .hero .eyebrow{opacity:1;transform:none}
+.hero-title{font-family:var(--head);font-weight:640;font-size:clamp(2.35rem,5.5vw,4.5rem);line-height:1.05;letter-spacing:-.035em;margin:26px 0 24px;max-width:1000px}
+.hero-title em{font-style:italic;color:var(--accent)}
+.h-line{display:block;overflow:hidden;padding-bottom:.08em;margin-bottom:-.08em}
+.h-line>span{display:block;transform:translateY(115%);transition:transform 1.05s var(--ease)}
+body.loaded .h-line>span{transform:none}
+.h-line:nth-child(1)>span{transition-delay:.18s}
+.h-line:nth-child(2)>span{transition-delay:.32s}
+.h-line:nth-child(3)>span{transition-delay:.46s}
+.hero-sub{max-width:600px;font-size:15.5px;line-height:1.7;color:rgba(255,255,255,.85);opacity:0;transform:translateY(14px);transition:.9s var(--ease) .65s}
+body.loaded .hero-sub{opacity:1;transform:none}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap;margin-top:34px;opacity:0;transform:translateY(14px);transition:.9s var(--ease) .8s}
+body.loaded .hero-btns{opacity:1;transform:none}
+.hero-strip{position:relative;z-index:3;border-top:1px solid rgba(255,255,255,.22);background:rgba(5,18,13,.5)}
+.strip-grid{display:flex;align-items:center;gap:36px;padding:15px 20px;}
+.strip-label{font:500 10.5px var(--mono);letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.8);line-height:1.5;flex-shrink:0}
+.marquee{overflow:hidden;flex:1}
+.mq-track{display:flex;width:max-content;animation:marq 30s linear infinite}
+.marquee:hover .mq-track{animation-play-state:paused}
+.mq-group{display:flex;align-items:center;gap:30px;padding-right:30px}
+.mq-item{font:italic 500 19px var(--head);color:rgba(255,255,255,.88);white-space:nowrap}
+.sep{width:6px;height:6px;background:var(--accent);transform:rotate(45deg);flex-shrink:0}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+/* ============ SECTIONS ============ */
+.section{padding:clamp(72px,9vw,120px) 0}
+.tint{background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+
+/* Who we are + video */
+.who-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(40px,6vw,90px);align-items:start}
+.who-pull{font:italic 500 clamp(1.25rem,2vw,1.55rem)/1.45 var(--head);letter-spacing:-.015em;color:var(--green-800);border-left:2px solid var(--accent);padding-left:22px;margin:30px 0}
+.who-grid p.tx{color:var(--ink-2);font-size:16.5px;margin-bottom:18px}
+.video-card{position:relative;border-radius:12px;overflow:hidden;background:var(--green-950);border:1px solid var(--line);box-shadow:0 24px 50px -30px rgba(10,35,23,.45);aspect-ratio:7/6}
+.v-el{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.v-fallback{position:absolute;inset:0;display:none}
+.video-card.v-failed .v-el{display:none}
+.video-card.v-failed .v-fallback{display:block}
+.video-card.v-failed .v-play,.video-card.v-failed .v-btns{display:none}
+.v-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:70px;height:70px;border-radius:50%;background:rgba(6,35,23,.55);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.35);color:#fff;display:grid;place-items:center;transition:.35s var(--ease);z-index:3}
+.v-play:hover{background:var(--green-800);transform:translate(-50%,-50%) scale(1.06)}
+.v-play svg{width:22px;height:22px}
+.video-card.playing .v-play{opacity:0;pointer-events:none}
+.v-bar{position:absolute;left:0;right:0;bottom:0;z-index:3;display:flex;justify-content:space-between;align-items:center;padding:32px 16px 14px;background:linear-gradient(180deg,transparent,rgba(4,18,12,.8));color:#fff}
+.v-tag{font:500 10px var(--mono);letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.85)}
+.v-btns{display:flex;gap:8px}
+.v-btn{width:36px;height:36px;border-radius:10px;border:1px solid rgba(255,255,255,.35);background:rgba(6,35,23,.45);color:#fff;display:grid;place-items:center;transition:.3s}
+.v-btn:hover{background:var(--green-800)}
+.v-btn svg{width:15px;height:15px}
+.v-play .ic-b,.v-btn .ic-b{display:none}
+.video-card.playing .v-play .ic-a,.video-card.playing .v-btn[data-act=toggle] .ic-a{display:none}
+.video-card.playing .v-play .ic-b,.video-card.playing .v-btn[data-act=toggle] .ic-b{display:block}
+.video-card:not(.muted) .v-btn[data-act=mute] .ic-a{display:none}
+.video-card:not(.muted) .v-btn[data-act=mute] .ic-b{display:block}
+
+/* Capabilities list */
+.caps-list{margin-top:44px}
+.cap-row{display:grid;grid-template-columns:64px 1fr auto 44px;align-items:center;gap:20px;padding:23px 10px;border-top:1px solid var(--line);cursor:pointer;position:relative}
+.caps-list li:last-child .cap-row{border-bottom:1px solid var(--line)}
+.cap-row::before{content:"";position:absolute;inset:0;background:rgba(21,90,65,.06);transform:scaleY(0);transform-origin:bottom;transition:transform .4s var(--ease);z-index:0}
+.cap-row:hover::before{transform:scaleY(1)}
+.cap-row>*{position:relative;z-index:1}
+.cap-idx{font:500 12px var(--mono);color:var(--muted);transition:color .3s}
+.cap-row:hover .cap-idx{color:var(--green-600)}
+.cap-name{font:600 clamp(1.1rem,2vw,1.45rem)/1.15 var(--head);letter-spacing:-.02em;color:var(--ink);transition:transform .4s var(--ease),color .3s}
+.cap-row:hover .cap-name{transform:translateX(10px);color:var(--green-800)}
+.cap-note{font:400 11.5px var(--mono);color:var(--muted);letter-spacing:.04em;text-align:right}
+.cap-arrow{width:38px;height:38px;border:1px solid var(--line);border-radius:10px;display:grid;place-items:center;color:var(--green-700);opacity:0;transform:translate(-6px,6px) scale(.85);transition:.35s var(--ease)}
+.cap-arrow svg{width:15px;height:15px}
+.cap-row:hover .cap-arrow{opacity:1;transform:none}
+.cap-hint{margin-top:16px;font:400 11px var(--mono);color:var(--muted);letter-spacing:.12em;text-transform:uppercase}
+.cap-preview{position:fixed;top:0;left:0;width:300px;height:205px;border-radius:12px;overflow:hidden;z-index:60;pointer-events:none;opacity:0;transition:opacity .35s var(--ease);box-shadow:0 26px 60px -18px rgba(6,35,23,.5)}
+.cap-preview.show{opacity:1}
+.cap-preview .duo{position:absolute;inset:0;transition:opacity .35s;opacity:0}
+.cap-preview .duo.on{opacity:1}
+
+/* Horizontal capability cards (duplicate section) */
+.h-nav{display:flex;justify-content:space-between;align-items:center;margin-top:42px}
+.h-count{font:500 12px var(--mono);letter-spacing:.2em;color:rgba(255,255,255,.6)}
+.h-arrows{display:flex;gap:10px}
+.h-arrow{width:46px;height:46px;border-radius:10px;border:1px solid rgba(255,255,255,.3);color:#fff;display:grid;place-items:center;transition:.3s}
+.h-arrow:hover:not(:disabled){background:var(--accent);color:var(--green-950);border-color:var(--accent)}
+.h-arrow:disabled{opacity:.3;pointer-events:none}
+.h-arrow svg{width:17px;height:17px}
+.h-wrap{position:relative;margin-top:18px}
+.h-rail{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 2px 10px;cursor:grab;scrollbar-width:none;-ms-overflow-style:none;user-select:none}
+.h-rail::-webkit-scrollbar{display:none}
+.h-rail.dragging{scroll-snap-type:none;cursor:grabbing}
+.h-rail:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:14px}
+.h-card{flex:0 0 clamp(258px,24vw,318px);scroll-snap-align:start;border-radius:14px;overflow:hidden;background:rgba(255,255,255,.05);border:1px solid var(--line-l);display:flex;flex-direction:column;transition:transform .5s var(--ease),border-color .4s}
+.h-card:hover{transform:translateY(-6px);border-color:rgba(200,222,106,.5)}
+.h-img{aspect-ratio:16/10;flex-shrink:0}
+.h-body{padding:20px 22px 24px;display:flex;flex-direction:column;gap:10px;flex:1}
+.h-top{display:flex;justify-content:space-between;align-items:center}
+.h-num{font:500 11px var(--mono);letter-spacing:.16em;color:var(--accent)}
+.h-ic{width:34px;height:34px;border-radius:10px;background:rgba(255,255,255,.08);display:grid;place-items:center;color:var(--accent)}
+.h-ic svg{width:16px;height:16px}
+.h-body h3{font:620 1.1rem/1.25 var(--head);letter-spacing:-.015em;color:#fff}
+.h-body p{font-size:13.5px;line-height:1.6;color:rgba(255,255,255,.68);flex:1}
+.h-link{display:inline-flex;align-items:center;gap:8px;font:600 11px var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.h-link svg{width:13px;height:13px;transition:transform .3s}
+.h-link:hover svg{transform:translate(3px,-3px)}
+.h-fade{position:absolute;top:0;right:0;bottom:0;width:90px;background:linear-gradient(90deg,transparent,var(--green-950));pointer-events:none;border-radius:0 14px 14px 0}
+.h-progress{margin-top:22px}
+.h-track{display:block;height:2px;background:rgba(255,255,255,.15);border-radius:2px;overflow:hidden}
+.h-fill{display:block;height:100%;width:0%;background:var(--accent);transition:width .15s linear}
+
+/* Services accordion */
+.svc-wrap{display:flex;gap:8px;height:600px;margin-top:48px}
+.svc-panel{position:relative;flex:1;flex-basis:0;min-width:64px;cursor:pointer;border-radius:12px;overflow:hidden;background:var(--green-950);transition:flex-grow .7s var(--ease)}
+.svc-panel.active{flex-grow:4.6}
+.svc-bg{position:absolute;inset:0;opacity:.24;transition:opacity .8s var(--ease)}
+.svc-bg img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.08)}
+.svc-bg::before{content:"";position:absolute;inset:0;background:var(--green-600);mix-blend-mode:color;opacity:.9}
+.svc-bg::after{content:"";position:absolute;inset:0;background:rgba(6,23,18,.62);transition:background .7s}
+.svc-panel.active .svc-bg{opacity:1}
+.svc-panel.active .svc-bg::after{background:rgba(6,23,18,.5)}
+.svc-rail{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:16px;padding:22px 0;color:#fff;transition:opacity .4s;z-index:2}
+.svc-num{font:500 11px var(--mono);color:var(--accent)}
+.svc-vtitle{writing-mode:vertical-rl;transform:rotate(180deg);font:600 14.5px/1 var(--head);letter-spacing:.04em;white-space:nowrap}
+.svc-panel.active .svc-rail{opacity:0;pointer-events:none}
+.svc-chev{display:none}
+.svc-body{position:absolute;left:0;bottom:0;z-index:3;max-width:430px;padding:30px 32px 32px;color:#fff;opacity:0;transform:translateY(16px);transition:opacity .55s var(--ease) .2s,transform .55s var(--ease) .2s}
+.svc-panel.active .svc-body{opacity:1;transform:none}
+.svc-tag{font:500 10.5px var(--mono);letter-spacing:.22em;text-transform:uppercase;color:var(--accent)}
+.svc-body h3{font:620 clamp(1.3rem,2vw,1.6rem)/1.15 var(--head);letter-spacing:-.02em;margin:10px 0 12px}
+.svc-body p{font-size:14.5px;line-height:1.65;color:rgba(255,255,255,.85)}
+.svc-subs{display:flex;flex-wrap:wrap;gap:8px;max-height:0;opacity:0;overflow:hidden;transition:max-height .5s var(--ease),opacity .5s,margin .5s}
+.svc-subs.open{max-height:260px;opacity:1;margin-top:16px}
+.svc-subs a{font:400 12px var(--sans);border:1px solid rgba(255,255,255,.4);border-radius:999px;padding:5px 12px;color:rgba(255,255,255,.9);transition:.3s}
+.svc-subs a:hover{background:var(--accent);border-color:var(--accent);color:var(--green-950)}
+.svc-more{display:inline-flex;align-items:center;gap:9px;margin-top:18px;font:600 11.5px var(--sans);letter-spacing:.14em;text-transform:uppercase;color:#fff;border-bottom:1px solid rgba(255,255,255,.5);padding-bottom:5px;transition:color .3s,border-color .3s}
+.svc-more:hover{color:var(--accent);border-color:var(--accent)}
+.svc-more svg{width:14px;height:14px;transition:transform .4s var(--ease)}
+.svc-more.open svg{transform:rotate(45deg)}
+
+/* Industries */
+.ind-grid{display:grid;grid-template-columns:5fr 7fr;gap:clamp(36px,5vw,84px);align-items:start;margin-top:10px}
+.ind-item{display:grid;grid-template-columns:44px 1fr 30px;align-items:center;width:100%;text-align:left;padding:21px 4px;border-top:1px solid var(--line)}
+.ind-list .ind-item:last-of-type{border-bottom:1px solid var(--line)}
+.ind-idx{font:500 12px var(--mono);color:var(--muted);transition:color .3s}
+.ind-name{font:600 clamp(1.25rem,2.2vw,1.6rem)/1.1 var(--head);letter-spacing:-.02em;color:var(--ink-2);transition:transform .4s var(--ease),color .3s}
+.ind-arrow{color:var(--green-700);opacity:0;transform:translate(-8px,8px);transition:.35s var(--ease)}
+.ind-arrow svg{width:20px;height:20px}
+.ind-item.on .ind-name,.ind-item:hover .ind-name{color:var(--green-800);transform:translateX(8px)}
+.ind-item.on .ind-idx{color:var(--green-500)}
+.ind-item.on .ind-arrow{opacity:1;transform:none}
+.ind-preview{position:sticky;top:130px}
+.ind-media{aspect-ratio:4/3;border-radius:12px;position:relative;overflow:hidden;background:var(--green-950)}
+.ind-media .duo{position:absolute;inset:0;opacity:0;transform:scale(1.05);transition:opacity .7s var(--ease),transform .9s var(--ease)}
+.ind-media .duo.on{opacity:1;transform:scale(1)}
+.ind-caps{display:grid;padding-top:18px}
+.ind-cap{grid-area:1/1;display:flex;justify-content:space-between;align-items:flex-start;gap:24px;opacity:0;transform:translateY(8px);transition:.55s var(--ease)}
+.ind-cap.on{opacity:1;transform:none}
+.ind-cap p{color:var(--ink-2);font-size:16px;max-width:420px}
+.ind-count{font:500 12px var(--mono);color:var(--green-700);white-space:nowrap;padding-top:4px}
+.ind-cta{margin-top:36px}
+
+/* Why — dark */
+.dark{background:var(--green-950);color:#fff;position:relative}
+.dark::before{content:"";position:absolute;inset:0;opacity:.05;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E")}
+.dark>.container{position:relative;z-index:1}
+.stats{display:flex;justify-content:space-between;gap:28px;flex-wrap:wrap;padding:36px 0 54px;border-bottom:1px solid var(--line-l)}
+.stat-num{display:block;font:640 clamp(2.5rem,4.4vw,3.8rem)/1 var(--head);letter-spacing:-.03em;color:#fff}
+.stat-label{display:block;font:500 10.5px var(--mono);letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-top:10px;max-width:170px;line-height:1.6}
+.wrows{margin-top:20px}
+.wrow{display:grid;grid-template-columns:70px 1fr 1.15fr;gap:30px;padding:32px 0;border-bottom:1px solid var(--line-l)}
+.wrow:last-child{border-bottom:none}
+.widx{font:500 12px var(--mono);color:rgba(255,255,255,.45);padding-top:8px}
+.wrow h3{font:620 clamp(1.15rem,1.8vw,1.45rem)/1.2 var(--head);letter-spacing:-.02em}
+.wrow p{color:rgba(255,255,255,.72);font-size:16px;line-height:1.65}
+
+/* Leadership */
+.lead-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(40px,6vw,90px);align-items:center}
+.lead-grid .tx{color:var(--ink-2);font-size:16.5px;margin-top:20px}
+.lead-visual{position:relative;padding-bottom:40px}
+.lv-main{width:76%;aspect-ratio:4/5;border-radius:12px}
+.lv-small{position:absolute;right:0;bottom:0;width:46%;aspect-ratio:1/1;border-radius:12px;border:7px solid var(--paper);box-shadow:0 24px 50px -22px rgba(6,35,23,.4)}
+.lv-ring{position:absolute;top:-24px;right:10%;width:104px;height:136px;border:1.5px solid var(--green-500);border-radius:50% 50% 50% 50%/58% 58% 42% 42%;transform:rotate(-16deg)}
+.lv-cap{position:absolute;left:0;bottom:6px;font:500 10px var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--muted);max-width:52%;line-height:1.7}
+
+/* Approach — pulsing dots */
+.rail{position:relative;margin-top:60px}
+.rail-line{position:absolute;left:0;right:0;top:29px;height:2px;background:rgba(14,35,24,.12)}
+.rail-fill{position:absolute;inset:0;background:var(--green-600);transform:scaleX(0);transform-origin:left}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:26px}
+.step{position:relative;padding-top:58px}
+.step-dot{position:absolute;top:21px;left:0;width:16px;height:16px;border-radius:50%;background:var(--paper-2);border:2px solid rgba(14,35,24,.28);transition:background .45s,border-color .45s;--p:rgba(30,122,85,.22);animation:dotPulse 2.8s cubic-bezier(.45,0,.2,1) infinite}
+.step.on .step-dot{background:var(--green-600);border-color:var(--green-600);--p:rgba(30,122,85,.55);animation-duration:1.8s}
+@keyframes dotPulse{
+  0%{box-shadow:0 0 0 0 var(--p)}
+  75%{box-shadow:0 0 0 13px rgba(30,122,85,0)}
+  100%{box-shadow:0 0 0 0 rgba(30,122,85,0)}
+}
+.step-inner{opacity:.4;transform:translateY(10px);transition:.6s var(--ease)}
+.step.on .step-inner{opacity:1;transform:none}
+.step-inner i{display:block;font:500 11px var(--mono);color:var(--green-600);font-style:normal;margin-bottom:8px}
+.step-inner h3{font:620 1.25rem var(--head);letter-spacing:-.02em;margin-bottom:8px}
+.step-inner p{font-size:14px;color:var(--muted);line-height:1.6}
+
+/* Client success */
+.success-frame{border:1px solid var(--line);border-radius:12px;background:var(--card-2);padding:clamp(30px,4.5vw,58px);display:grid;grid-template-columns:5fr 7fr;gap:clamp(32px,4vw,60px);box-shadow:0 22px 48px -34px rgba(10,35,23,.3)}
+.suc-left .sec-title{font-size:clamp(1.6rem,2.6vw,2.2rem)}
+.suc-left p{color:var(--ink-2);margin:16px 0 28px;font-size:16px}
+.suc-list{display:grid;grid-template-columns:1fr 1fr;column-gap:36px}
+.suc-item{display:flex;gap:14px;align-items:flex-start;padding:17px 0;border-top:1px solid var(--line);font-size:15.5px;color:var(--ink-2)}
+.suc-item .ic{flex-shrink:0;width:27px;height:27px;border:1px solid var(--green-600);border-radius:10px;display:grid;place-items:center;color:var(--green-700);margin-top:1px}
+.suc-item .ic svg{width:13px;height:13px}
+
+/* Insights */
+.ins-bar{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;margin-top:40px}
+.chips{display:flex;gap:10px;flex-wrap:wrap}
+.chip{font:600 12px var(--sans);letter-spacing:.08em;text-transform:uppercase;padding:10px 20px;border:1px solid var(--line);border-radius:10px;color:var(--muted);transition:.3s}
+.chip:hover{border-color:var(--green-700);color:var(--green-800)}
+.chip.on{background:var(--green-800);border-color:var(--green-800);color:#fff}
+.ins-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:22px;margin-top:32px}
+.card{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--card);display:flex;flex-direction:column;cursor:pointer;transition:transform .5s var(--ease),box-shadow .5s}
+.card:hover{transform:translateY(-6px);box-shadow:0 26px 50px -22px rgba(10,35,23,.28)}
+.card.feat{grid-column:span 12;flex-direction:row}
+.card.feat .card-img{width:54%;aspect-ratio:auto;flex-shrink:0}
+.card-img{aspect-ratio:16/10;overflow:hidden}
+.card-img img{transition:transform .9s var(--ease)}
+.card:hover .card-img img{transform:scale(1.05)}
+.card-body{padding:26px 28px;display:flex;flex-direction:column;gap:13px;flex:1}
+.meta{display:flex;align-items:center;gap:14px;font:500 10.5px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.meta .latest{margin-left:auto;color:var(--green-600);letter-spacing:.14em}
+.tag{border:1px solid var(--green-700);color:var(--green-700);padding:4px 11px;border-radius:999px}
+.tag.cs{background:var(--green-800);border-color:var(--green-800);color:#fff}
+.card h3{font:620 clamp(1.2rem,1.8vw,1.5rem)/1.25 var(--head);letter-spacing:-.02em}
+.card.feat h3{font-size:clamp(1.4rem,2.4vw,1.9rem)}
+.card .ex{font-size:14.5px;color:var(--muted);line-height:1.6}
+.card .read{margin-top:auto;display:inline-flex;align-items:center;gap:8px;font:600 11.5px var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--green-700)}
+.card .read svg{width:14px;height:14px;transition:transform .3s}
+.card:hover .read svg{transform:translate(3px,-3px)}
+
+/* CTA */
+.cta-sec{overflow:hidden;position:relative;padding:clamp(90px,11vw,150px) 0}
+.cta-word{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font:700 21vw var(--head);letter-spacing:.02em;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.08);white-space:nowrap;pointer-events:none;user-select:none}
+.cta-sec .container{position:relative;z-index:1}
+.cta-sec h2{font:640 clamp(2.1rem,4.2vw,3.4rem)/1.1 var(--head);letter-spacing:-.03em;max-width:840px;margin-top:20px}
+.cta-sec h2 em{font-style:italic;color:var(--accent)}
+.cta-lead{max-width:640px;color:rgba(255,255,255,.82);font-size:16.5px;margin-top:22px}
+.cta-line{font:italic 500 clamp(1.2rem,2.4vw,1.7rem) var(--head);letter-spacing:-.02em;color:var(--accent);margin-top:34px}
+.cta-row{display:flex;align-items:center;gap:22px;flex-wrap:wrap;margin-top:38px}
+.cta-contacts{display:flex;gap:clamp(24px,4vw,60px);flex-wrap:wrap;margin-top:52px;padding-top:34px;border-top:1px solid var(--line-l)}
+.ctc{display:flex;gap:14px;align-items:flex-start}
+.ctc svg{width:17px;height:17px;color:var(--accent);margin-top:3px;flex-shrink:0}
+.ctc i{display:block;font:500 10px var(--mono);letter-spacing:.2em;text-transform:uppercase;font-style:normal;color:rgba(255,255,255,.55);margin-bottom:5px}
+.ctc b{font:600 15px var(--sans);color:#fff}
+.ctc a:hover{color:var(--accent)}
+
+/* ============ FOOTER ============ */
+footer{background:#04170F;color:rgba(255,255,255,.72)}
+.foot-top{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:48px 34px;padding:clamp(50px,6vw,72px) 0 46px}
+.foot-logo-chip{display:inline-flex;align-self:flex-start;background:#fff;border-radius:12px;padding:10px 16px;margin-bottom:18px}
+.foot-logo-chip .logo-img{height:34px}
+.foot-logo-chip .logo-fb{display:none}
+.foot-logo-chip.no-img .logo-fb{display:flex}
+.foot-logo-chip.no-img .fb-word{color:var(--green-900)}
+.foot-brand p{font-size:13.5px;line-height:1.7;max-width:300px}
+.foot-quick{margin-top:24px;font-size:13px;line-height:1.9;color:rgba(255,255,255,.6)}
+.foot-quick b{display:block;font:500 10px var(--mono);letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:6px}
+.foot-quick a:hover{color:var(--accent)}
+.foot-col h4{font:500 10.5px var(--mono);letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:16px}
+.foot-col a{display:block;font-size:13.5px;padding:4.5px 0;transition:.3s;color:rgba(255,255,255,.72)}
+.foot-col a:hover{color:var(--accent);padding-left:5px}
+.foot-services{border-top:1px solid var(--line-l);padding:34px 0 42px}
+.fs-label{font:500 10.5px var(--mono);letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:24px}
+.fs-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:28px 20px}
+.fs-cat{display:block;font:650 13.5px var(--head);letter-spacing:-.01em;color:#fff;margin-bottom:10px;transition:.3s}
+.fs-cat:hover{color:var(--accent)}
+.fs-sub{display:block;font-size:12.5px;color:rgba(255,255,255,.62);padding:3px 0;transition:.3s}
+.fs-sub:hover{color:var(--accent)}
+.foot-bot{border-top:1px solid var(--line-l);padding:22px 0;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;font-size:12.5px}
+.foot-bot nav{display:flex;gap:22px;flex-wrap:wrap}
+.foot-bot nav a:hover{color:var(--accent)}
+
+/* ============ MODAL / TOAST / MISC ============ */
+.overlay{position:fixed;inset:0;z-index:300;background:rgba(4,18,12,.62);backdrop-filter:blur(5px);display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;visibility:hidden;transition:.4s var(--ease)}
+.overlay.open{opacity:1;visibility:visible}
+.modal{position:relative;background:var(--paper);color:var(--ink);width:min(580px,100%);max-height:90vh;overflow-y:auto;border-radius:14px;padding:clamp(28px,4vw,46px);transform:translateY(26px);transition:transform .45s var(--ease)}
+.overlay.open .modal{transform:none}
+.modal-close{position:absolute;top:16px;right:16px;width:40px;height:40px;display:grid;place-items:center;border:1px solid var(--line);border-radius:10px;transition:.3s}
+.modal-close:hover{background:var(--ink);color:#fff}
+.modal-close svg{width:17px;height:17px}
+.m-eyebrow{font:500 10.5px var(--mono);letter-spacing:.22em;text-transform:uppercase;color:var(--green-700)}
+.m-title{font:640 clamp(1.5rem,3vw,1.85rem)/1.15 var(--head);letter-spacing:-.025em;margin:12px 0 8px}
+.m-title em{font-style:italic;color:var(--green-700)}
+.m-sub{color:var(--muted);font-size:14.5px;margin-bottom:26px}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.field{margin-bottom:18px}
+.field label{display:block;font:500 10.5px var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--ink-2);margin-bottom:8px}
+.field input,.field select,.field textarea{width:100%;background:#F4F8F5;border:1px solid var(--line);border-radius:10px;padding:13px 14px;font:400 14.5px var(--sans);color:var(--ink);transition:border-color .3s;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--green-600)}
+.field .err{display:none;font-size:12px;color:var(--err);margin-top:6px}
+.field.invalid input{border-color:var(--err)}
+.field.invalid .err{display:block}
+.btn-block{width:100%;justify-content:center}
+.btn.busy{opacity:.7;pointer-events:none}
+.m-note{font-size:12.5px;color:var(--muted);text-align:center;margin-top:16px}
+.m-note a{color:var(--green-700);border-bottom:1px solid var(--green-600)}
+.m-success{text-align:center;padding:26px 6px}
+.m-success .ok-ic{width:64px;height:64px;border-radius:50%;background:var(--green-800);color:var(--accent);display:grid;place-items:center;margin:0 auto 20px}
+.m-success .ok-ic svg{width:28px;height:28px}
+.m-success h3{font:640 1.6rem var(--head);letter-spacing:-.02em;margin-bottom:10px}
+.m-success p{color:var(--ink-2);font-size:15px}
+.reader .meta{margin-bottom:16px}
+.reader h3{font:640 clamp(1.35rem,3vw,1.7rem)/1.2 var(--head);letter-spacing:-.025em;margin-bottom:18px}
+.reader p{color:var(--ink-2);font-size:15.5px;line-height:1.75;margin-bottom:16px}
+.reader-foot{font:500 11px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--green-700);padding-top:14px;border-top:1px solid var(--line)}
+.toast{position:fixed;right:24px;bottom:24px;z-index:400;display:flex;align-items:center;gap:12px;background:var(--green-950);color:#fff;padding:15px 20px;border-radius:10px;box-shadow:0 22px 44px -14px rgba(4,18,12,.5);max-width:380px;font-size:14px;transform:translateY(14px);opacity:0;visibility:hidden;transition:.45s var(--ease)}
+.toast.show{transform:none;opacity:1;visibility:visible}
+.toast svg{width:18px;height:18px;color:var(--accent);flex-shrink:0}
+#toTop{position:fixed;right:24px;bottom:88px;z-index:90;width:46px;height:46px;border:1px solid var(--line);border-radius:10px;background:var(--paper);display:grid;place-items:center;color:var(--green-800);opacity:0;visibility:hidden;transform:translateY(10px);transition:.4s var(--ease)}
+#toTop.show{opacity:1;visibility:visible;transform:none}
+#toTop:hover{background:var(--green-800);color:#fff}
+#toTop svg{width:18px;height:18px}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width:1140px){
+  .nav-list{display:none}
+  .burger{display:flex}
+}
+@media (max-width:1080px){
+  .foot-top{grid-template-columns:1fr 1fr;gap:40px 28px}
+  .foot-brand{grid-column:1/-1}
+  .fs-grid{grid-template-columns:repeat(4,1fr)}
+}
+@media (max-width:960px){
+  .who-grid,.lead-grid{grid-template-columns:1fr}
+  .ind-grid{grid-template-columns:1fr}
+  .ind-preview{position:static}
+  .sec-head.split{grid-template-columns:1fr;gap:20px}
+  .sec-head.split .side{border-left:none;padding-left:0;border-top:1px solid var(--line);padding-top:16px}
+  .dark .sec-head.split .side{border-top-color:var(--line-l)}
+  .success-frame{grid-template-columns:1fr}
+  .card.feat{flex-direction:column}
+  .card.feat .card-img{width:100%;aspect-ratio:16/9}
+  .stats{gap:34px}
+  .stat{flex:1 1 38%}
+}
+@media (max-width:900px){
+  .svc-wrap{flex-direction:column;height:auto}
+  .svc-panel{min-width:0}
+  .svc-rail{position:static;flex-direction:row;justify-content:space-between;align-items:center;padding:19px 20px;opacity:1}
+  .svc-panel.active .svc-rail{opacity:1}
+  .svc-vtitle{writing-mode:horizontal-tb;transform:none;font-size:16px}
+  .svc-chev{display:block;color:#fff;transition:transform .4s}
+  .svc-chev svg{width:17px;height:17px}
+  .svc-panel.active .svc-chev{transform:rotate(180deg)}
+  .svc-body{position:static;opacity:1;transform:none;max-width:none;max-height:0;overflow:hidden;padding:0 20px;transition:max-height .6s var(--ease)}
+  .svc-panel.active .svc-body{max-height:720px;padding-bottom:26px}
+  .wrow{grid-template-columns:1fr;gap:8px;padding:26px 0}
+  .widx{padding:0}
+  .cap-note{display:none}
+  .cap-row{grid-template-columns:44px 1fr 40px}
+}
+@media (max-width:860px){
+  .steps{grid-template-columns:1fr;gap:34px}
+  .step{padding:0 0 0 44px}
+  .step-dot{top:4px}
+  .rail-line{left:7px;right:auto;top:8px;bottom:8px;width:2px;height:auto}
+  .rail-fill{transform:scaleY(0);transform-origin:top}
+  .suc-list{grid-template-columns:1fr}
+}
+@media (max-width:760px){
+  .fs-grid{grid-template-columns:repeat(2,1fr)}
+  .h-card{flex-basis:min(80vw,320px)}
+}
+@media (max-width:640px){
+  .strip-label{display:none}
+  .topbar .grp.offices{display:none}
+  .header-cta{display:none}
+  .f-row{grid-template-columns:1fr}
+  .cap-preview{display:none}
+  .hero-title{font-size:clamp(2rem,9.5vw,2.6rem)}
+  .foot-top{grid-template-columns:1fr}
+}
+/* Master button radius — change once, updates everything */
+.btn,.chip,.v-btn,.cap-arrow,.h-arrow,.h-ic,.mc-ic,.mp-a,.burger,.mm-close,.modal-close,#toTop,.suc-item .ic,.field input,.field select,.field textarea{border-radius:6px}
+</style>
+</head>
+<body>
+<!-- <a class="skip" href="#about">Skip to content</a> -->
+
+<!-- Utility top bar -->
+<div class="topbar">
+  <div class="container topbar-in">
+    <div class="grp offices">
+      <span><i data-lucide="map-pin"></i>India Office&nbsp;&nbsp;·&nbsp;&nbsp;UAE Office</span>
+    </div>
+    <div class="grp">
+      <a href="tel:+918129626921"><i data-lucide="phone"></i>+91 81296 26921</a>
+      <a href="mailto:info@avcados.org"><i data-lucide="mail"></i>info@avcados.org</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header: logo + full menu + CTA -->
+<header class="header" id="header">
+  <div class="container header-in">
+    <a class="logo" href="index.html" aria-label="AVCADO'S — home">
+      <img class="logo-img" src="https://z-cdn-media.chatglm.cn/files/b8d15b96-913a-428f-8921-035528bebe59.png?auth_key=1887508285-fb71227fce874d63ac8da4c4eb9decf1-0-930d358e45bc6cf99cfbeea2735811b5" alt="AVCADO'S" onerror="this.closest('.logo').classList.add('no-img')">
+      <span class="logo-fb" aria-hidden="true">
+        <span class="fb-word">AVCAD<svg class="fb-avo" viewBox="0 0 32 42"><defs><linearGradient id="avog" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2F9B6E"/><stop offset="1" stop-color="#0E3B2C"/></linearGradient></defs><path d="M16 1C9.5 1 5.5 8.2 5.5 16.5 5.5 28.2 10 41 16 41s10.5-12.8 10.5-24.5C26.5 8.2 22.5 1 16 1Z" fill="url(#avog)"/><path d="M16 6.2c-4.5 0-7.4 5.5-7.4 12 0 8.6 3.1 17.6 7.4 17.6s7.4-9 7.4-17.6c0-6.5-2.9-12-7.4-12Z" fill="#C8DE6A"/><circle cx="16" cy="24.5" r="4.8" fill="#155A41"/></svg>&rsquo;S</span>
+        <small>CONSULTING · EXECUTION</small>
+      </span>
+    </a>
+    <nav aria-label="Primary">
+      <ul class="nav-list">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li class="has-drop">
+          <a href="about.html">About Us <i data-lucide="chevron-down"></i></a>
+          <div class="drop">
+            <a class="drop-link" href="about.html#our-story">Our Story</a>
+            <a class="drop-link" href="about.html#leadership-team">Leadership Team</a>
+            <a class="drop-link" href="about.html#global-presence">Global Presence</a>
+          </div>
+        </li>
+        <li class="has-mega">
+          <a href="services.html">Services <i data-lucide="chevron-down"></i></a>
+          <div class="mega">
+            <div class="container">
+              <div class="mega-grid">
+                <div class="mega-cell">
+                  <a class="mc-head" href="consulting-services.html"><span class="mc-ic"><i data-lucide="compass"></i></span><b>Consulting Services</b></a>
+                  <div class="mc-links">
+                    <a href="consulting-services.html#business-consulting">Business Consulting</a>
+                    <a href="consulting-services.html#healthcare-consulting">Healthcare Consulting</a>
+                    <a href="consulting-services.html#financial-consulting">Financial Consulting</a>
+                    <a href="consulting-services.html#hr-training">HR &amp; Training</a>
+                    <a href="consulting-services.html#technology-consulting">Technology Consulting</a>
+                    <a href="consulting-services.html#industrial-consulting">Industrial Consulting</a>
+                  </div>
+                </div>
+                <div class="mega-cell">
+                  <a class="mc-head" href="projects-engineering.html"><span class="mc-ic"><i data-lucide="hard-hat"></i></span><b>Projects &amp; Engineering</b></a>
+                  <div class="mc-links">
+                    <a href="projects-engineering.html#pmc">Project Management Consultancy (PMC)</a>
+                    <a href="projects-engineering.html#corporate-projects-execution">Corporate Projects &amp; Execution</a>
+                    <a href="projects-engineering.html#architecture-interiors">Architecture &amp; Interiors</a>
+                    <a href="projects-engineering.html#civil-infrastructure">Civil &amp; Infrastructure</a>
+                    <a href="projects-engineering.html#mep-engineering">MEP Engineering</a>
+                    <a href="projects-engineering.html#retrofit-maintenance">Retrofit &amp; Maintenance</a>
+                  </div>
+                </div>
+                <div class="mega-cell">
+                  <a class="mc-head" href="facility-management.html"><span class="mc-ic"><i data-lucide="building-2"></i></span><b>Facility Management</b></a>
+                  <div class="mc-links">
+                    <a href="facility-management.html#technical-operations">Technical Operations</a>
+                    <a href="facility-management.html#corporate-wellness">Corporate Wellness</a>
+                    <a href="facility-management.html#housekeeping-services">Housekeeping Services</a>
+                    <a href="facility-management.html#amc-maintenance">AMC &amp; Maintenance</a>
+                  </div>
+                </div>
+                <div class="mega-cell">
+                  <a class="mc-head" href="healthcare-solutions.html"><span class="mc-ic"><i data-lucide="stethoscope"></i></span><b>Healthcare Solutions</b></a>
+                  <div class="mc-links">
+                    <a href="healthcare-solutions.html#hospital-consulting">Hospital Consulting</a>
+                    <a href="healthcare-solutions.html#hospital-setup-operations">Hospital Setup &amp; Operations</a>
+                    <a href="healthcare-solutions.html#diagnostic-centres">Diagnostic Centres &amp; Policlinics</a>
+                    <a href="healthcare-solutions.html#corporate-clinics">Corporate Clinics</a>
+                    <a href="healthcare-solutions.html#ayurveda-wellness">Ayurveda &amp; Wellness Centres</a>
+                  </div>
+                </div>
+                <div class="mega-cell">
+                  <a class="mc-head" href="marketing-branding.html"><span class="mc-ic"><i data-lucide="megaphone"></i></span><b>Marketing &amp; Branding</b></a>
+                  <div class="mc-links">
+                    <a href="marketing-branding.html#brand-strategy">Brand Strategy</a>
+                    <a href="marketing-branding.html#digital-marketing">Digital Marketing</a>
+                    <a href="marketing-branding.html#healthcare-marketing">Healthcare Marketing</a>
+                    <a href="marketing-branding.html#signage-branding">Signage &amp; Branding Solutions</a>
+                  </div>
+                </div>
+                <div class="mega-cell">
+                  <a class="mc-head" href="outsourcing-services.html"><span class="mc-ic"><i data-lucide="users"></i></span><b>Outsourcing Services</b></a>
+                  <div class="mc-links">
+                    <a href="outsourcing-services.html#finance-accounting-bpo">Finance &amp; Accounting BPO</a>
+                    <a href="outsourcing-services.html#hr-outsourcing">HR Outsourcing</a>
+                    <a href="outsourcing-services.html#marketing-outsourcing">Marketing Outsourcing</a>
+                  </div>
+                </div>
+                <div class="mega-cell">
+                  <a class="mc-head" href="sustainability.html"><span class="mc-ic"><i data-lucide="leaf"></i></span><b>Sustainability</b></a>
+                  <div class="mc-links">
+                    <a href="sustainability.html#waste-management">Waste Management</a>
+                    <a href="sustainability.html#e-waste-recycling">E-Waste Recycling</a>
+                    <a href="sustainability.html#industrial-recycling">Industrial Recycling</a>
+                  </div>
+                </div>
+                <a class="mega-promo" href="services.html">
+                  <span class="mp-star">✦</span>
+                  <span class="mp-t">All Services</span>
+                  <span class="mp-s">Explore the complete practice directory across consulting, engineering, healthcare and operations.</span>
+                  <span class="mp-a"><i data-lucide="arrow-right"></i></span>
+                </a>
+              </div>
+              <div class="mega-foot">
+                <span>✦ &nbsp;Not sure where to start?</span>
+                <a href="#" class="js-consult">Book a consultation <i data-lucide="arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="has-drop">
+          <a href="industries.html">Industries <i data-lucide="chevron-down"></i></a>
+          <div class="drop">
+            <a class="drop-link" href="industries.html#healthcare">Healthcare</a>
+            <a class="drop-link" href="industries.html#corporate-it">Corporate &amp; IT</a>
+            <a class="drop-link" href="industries.html#manufacturing">Manufacturing</a>
+            <a class="drop-link" href="industries.html#hospitality">Hospitality</a>
+            <a class="drop-link" href="industries.html#government-institutions">Government &amp; Institutions</a>
+          </div>
+        </li>
+        <li><a href="case-studies.html">Case Studies</a></li>
+        <li><a href="insights.html">Insights</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+    <div style="display:flex;align-items:center;gap:12px">
+      <a href="#" class="btn btn-solid btn-sm header-cta js-consult"><span class="bl"><span>Book a Consultation</span><span>Book a Consultation</span></span></a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile drawer -->
+<div class="mm" id="mobileMenu" aria-hidden="true">
+  <div class="mm-head">
+    <span class="mm-title">✦ &nbsp;AVCADO'S — Menu</span>
+    <button class="mm-close" aria-label="Close menu"><i data-lucide="x"></i></button>
+  </div>
+  <nav class="mm-nav" aria-label="Mobile">
+    <a class="mm-link" href="index.html">Home</a>
+    <div class="mm-group">
+      <button class="mm-parent" aria-expanded="false"><span>About Us</span><i data-lucide="plus"></i></button>
+      <div class="mm-sub">
+        <a href="about.html#our-story">Our Story</a>
+        <a href="about.html#leadership-team">Leadership Team</a>
+        <a href="about.html#global-presence">Global Presence</a>
+      </div>
+    </div>
+    <div class="mm-group">
+      <button class="mm-parent" aria-expanded="false"><span>Services</span><i data-lucide="plus"></i></button>
+      <div class="mm-sub">
+        <a class="mm-cat" href="consulting-services.html">Consulting Services</a>
+        <a class="mm-sublink" href="consulting-services.html#business-consulting">Business Consulting</a>
+        <a class="mm-sublink" href="consulting-services.html#healthcare-consulting">Healthcare Consulting</a>
+        <a class="mm-sublink" href="consulting-services.html#financial-consulting">Financial Consulting</a>
+        <a class="mm-sublink" href="consulting-services.html#hr-training">HR &amp; Training</a>
+        <a class="mm-sublink" href="consulting-services.html#technology-consulting">Technology Consulting</a>
+        <a class="mm-sublink" href="consulting-services.html#industrial-consulting">Industrial Consulting</a>
+        <a class="mm-cat" href="projects-engineering.html">Projects &amp; Engineering</a>
+        <a class="mm-sublink" href="projects-engineering.html#pmc">Project Management Consultancy (PMC)</a>
+        <a class="mm-sublink" href="projects-engineering.html#corporate-projects-execution">Corporate Projects &amp; Execution</a>
+        <a class="mm-sublink" href="projects-engineering.html#architecture-interiors">Architecture &amp; Interiors</a>
+        <a class="mm-sublink" href="projects-engineering.html#civil-infrastructure">Civil &amp; Infrastructure</a>
+        <a class="mm-sublink" href="projects-engineering.html#mep-engineering">MEP Engineering</a>
+        <a class="mm-sublink" href="projects-engineering.html#retrofit-maintenance">Retrofit &amp; Maintenance</a>
+        <a class="mm-cat" href="facility-management.html">Facility Management</a>
+        <a class="mm-sublink" href="facility-management.html#technical-operations">Technical Operations</a>
+        <a class="mm-sublink" href="facility-management.html#corporate-wellness">Corporate Wellness</a>
+        <a class="mm-sublink" href="facility-management.html#housekeeping-services">Housekeeping Services</a>
+        <a class="mm-sublink" href="facility-management.html#amc-maintenance">AMC &amp; Maintenance</a>
+        <a class="mm-cat" href="healthcare-solutions.html">Healthcare Solutions</a>
+        <a class="mm-sublink" href="healthcare-solutions.html#hospital-consulting">Hospital Consulting</a>
+        <a class="mm-sublink" href="healthcare-solutions.html#hospital-setup-operations">Hospital Setup &amp; Operations</a>
+        <a class="mm-sublink" href="healthcare-solutions.html#diagnostic-centres">Diagnostic Centres &amp; Policlinics</a>
+        <a class="mm-sublink" href="healthcare-solutions.html#corporate-clinics">Corporate Clinics</a>
+        <a class="mm-sublink" href="healthcare-solutions.html#ayurveda-wellness">Ayurveda &amp; Wellness Centres</a>
+        <a class="mm-cat" href="marketing-branding.html">Marketing &amp; Branding</a>
+        <a class="mm-sublink" href="marketing-branding.html#brand-strategy">Brand Strategy</a>
+        <a class="mm-sublink" href="marketing-branding.html#digital-marketing">Digital Marketing</a>
+        <a class="mm-sublink" href="marketing-branding.html#healthcare-marketing">Healthcare Marketing</a>
+        <a class="mm-sublink" href="marketing-branding.html#signage-branding">Signage &amp; Branding Solutions</a>
+        <a class="mm-cat" href="outsourcing-services.html">Outsourcing Services</a>
+        <a class="mm-sublink" href="outsourcing-services.html#finance-accounting-bpo">Finance &amp; Accounting BPO</a>
+        <a class="mm-sublink" href="outsourcing-services.html#hr-outsourcing">HR Outsourcing</a>
+        <a class="mm-sublink" href="outsourcing-services.html#marketing-outsourcing">Marketing Outsourcing</a>
+        <a class="mm-cat" href="sustainability.html">Sustainability</a>
+        <a class="mm-sublink" href="sustainability.html#waste-management">Waste Management</a>
+        <a class="mm-sublink" href="sustainability.html#e-waste-recycling">E-Waste Recycling</a>
+        <a class="mm-sublink" href="sustainability.html#industrial-recycling">Industrial Recycling</a>
+      </div>
+    </div>
+    <div class="mm-group">
+      <button class="mm-parent" aria-expanded="false"><span>Industries</span><i data-lucide="plus"></i></button>
+      <div class="mm-sub">
+        <a href="industries.html#healthcare">Healthcare</a>
+        <a href="industries.html#corporate-it">Corporate &amp; IT</a>
+        <a href="industries.html#manufacturing">Manufacturing</a>
+        <a href="industries.html#hospitality">Hospitality</a>
+        <a href="industries.html#government-institutions">Government &amp; Institutions</a>
+      </div>
+    </div>
+    <a class="mm-link" href="case-studies.html">Case Studies</a>
+    <a class="mm-link" href="insights.html">Insights</a>
+    <a class="mm-link" href="contact.html">Contact Us</a>
+  </nav>
+  <div class="mm-foot">
+    <span>India Office · UAE Office</span>
+    <span>+91 81296 26921&nbsp;&nbsp;·&nbsp;&nbsp;info@avcados.org</span>
+    <a href="#" class="btn btn-accent btn-sm js-consult"><span class="bl"><span>Book a Consultation</span><span>Book a Consultation</span></span><i data-lucide="arrow-right"></i></a>
+  </div>
+</div>
+
+<main>
+<!-- ================= HERO ================= -->
+<section class="hero" id="home">
+  <div class="hero-bg"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80" alt="Modern corporate infrastructure"></div>
+  <div class="hero-noise"></div>
+  <div class="container hero-inner">
+    <p class="eyebrow">Consulting · PMC · Engineering · Healthcare · Facility Management</p>
+    <h1 class="hero-title">
+      <span class="h-line"><span>Transforming Businesses.</span></span>
+      <span class="h-line"><span>Building Infrastructure.</span></span>
+      <span class="h-line"><span>Driving <em>Growth.</em></span></span>
+    </h1>
+    <p class="hero-sub">AVCADO'S is a multidisciplinary consulting, project management, engineering, healthcare and facility management organization — helping businesses improve performance, execute critical projects, optimize operations and achieve sustainable growth across India and the UAE.</p>
+    <div class="hero-btns">
+      <a href="#" class="btn btn-accent js-consult"><span class="bl"><span>Book a Consultation</span><span>Book a Consultation</span></span><i data-lucide="arrow-right"></i></a>
+      <a href="services.html" class="btn btn-ghost-l"><span class="bl"><span>Explore Our Services</span><span>Explore Our Services</span></span><i data-lucide="arrow-right"></i></a>
+    </div>
+  </div>
+  <div class="hero-strip">
+    <div class="container strip-grid">
+      <span class="strip-label">Trusted expertise<br>across industries</span>
+      <div class="marquee" aria-hidden="true">
+        <div class="mq-track">
+          <div class="mq-group"><span class="mq-item">Healthcare</span><span class="sep"></span><span class="mq-item">Corporate &amp; IT</span><span class="sep"></span><span class="mq-item">Manufacturing</span><span class="sep"></span><span class="mq-item">Hospitality</span><span class="sep"></span><span class="mq-item">Government &amp; Institutions</span><span class="sep"></span></div>
+          <div class="mq-group"><span class="mq-item">Healthcare</span><span class="sep"></span><span class="mq-item">Corporate &amp; IT</span><span class="sep"></span><span class="mq-item">Manufacturing</span><span class="sep"></span><span class="mq-item">Hospitality</span><span class="sep"></span><span class="mq-item">Government &amp; Institutions</span><span class="sep"></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHO WE ARE ================= -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="who-grid">
+      <div data-reveal>
+        <span class="eyebrow">Who We Are</span>
+        <h2 class="sec-title">Strategy Meets <em>Execution</em></h2>
+        <p class="who-pull">Many organizations struggle because consulting, project execution, operational management and support services are handled by different partners. <strong>AVCADO'S brings them together.</strong></p>
+        <p class="tx">We combine business consulting, healthcare expertise, project management, engineering solutions, facility management, corporate wellness and business support services under one organization.</p>
+        <p class="tx">This integrated approach enables us to identify challenges, develop solutions, execute projects and support long-term performance improvement.</p>
+      </div>
+      <div class="video-card" id="videoCard" data-reveal style="--d:.15s">
+        <video id="whoVideo" class="v-el" muted loop playsinline preload="metadata" aria-label="AVCADO'S integrated delivery in motion" poster="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80">
+          <source src="https://assets.mixkit.co/videos/preview/mixkit-engineers-discussing-blueprints-in-a-construction-site-1627-large.mp4" type="video/mp4">
+          <source src="https://videos.pexels.com/video-files/2835378/2835378-hd_1280_720_25fps.mp4" type="video/mp4">
+        </video>
+        <div class="duo v-fallback"><img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80" alt="AVCADO'S team on a project site"></div>
+        <button class="v-play" aria-label="Play or pause video">
+          <span class="ic-a"><i data-lucide="play"></i></span>
+          <span class="ic-b"><i data-lucide="pause"></i></span>
+        </button>
+        <div class="v-bar">
+          <span class="v-tag">✦ &nbsp;Fig. 01 — Integrated delivery in motion</span>
+          <span class="v-btns">
+            <button class="v-btn" data-act="toggle" aria-label="Play or pause"><span class="ic-a"><i data-lucide="play"></i></span><span class="ic-b"><i data-lucide="pause"></i></span></button>
+            <button class="v-btn" data-act="mute" aria-label="Toggle sound"><span class="ic-a"><i data-lucide="volume-x"></i></span><span class="ic-b"><i data-lucide="volume-2"></i></span></button>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHAT MAKES US DIFFERENT (list) ================= -->
+<!-- <section class="section tint" id="different">
+  <div class="container">
+    <div class="sec-head split" data-reveal>
+      <div>
+        <span class="eyebrow">What Makes AVCADO'S Different</span>
+        <h2 class="sec-title">One team. <em>Eight</em> disciplines.</h2>
+      </div>
+      <p class="side">The capabilities organizations usually assemble from five different partners — brought under a single accountable structure.</p>
+    </div>
+    <ul class="caps-list" data-reveal style="--d:.1s">
+      <li><a class="cap-row" href="consulting-services.html"><span class="cap-idx">01</span><span class="cap-name">Consulting Expertise</span><span class="cap-note">Strategy · Advisory · Transformation</span><span class="cap-arrow"><i data-lucide="arrow-up-right"></i></span></a></li>
+      <li><a class="cap-row" href="projects-engineering.html"><span class="cap-idx">02</span><span class="cap-name">Project Management Consultancy</span><span class="cap-note">Planning · Governance · Delivery</span><span class="cap-arrow"><i data-lucide="arrow-up-right"></i></span></a></li>
+      <li><a class="cap-row" href="projects-engineering.html"><span class="cap-idx">03</span><span class="cap-name">Engineering &amp; Infrastructure Solutions</span><span class="cap-note">Design · Civil · MEP</span><span class="cap-arrow"><i data-lucide="arrow-up-right"></i></span></a></li>
+      <li><a class="cap-row" href="healthcare-solutions.html"><span class="cap-idx">04</span><span class="cap-name">Healthcare Management Consulting</span><span class="cap-note">Hospitals · Clinics · Diagnostics</span><span class="cap-arrow"><i data-lucide="arrow-up-right"></i></span></a></li>
+      <li><a class="cap-row" href="facility-management.html"><span class="cap-idx">05</span><span class="cap-name">Facility Management Services</span><span class="cap-note">Operations · Maintenance · Support</span><span class="cap-arrow"><i data-lucide="arrow-up-right"></i></span></a></li>
+      <li><a class="cap-row" href="facility-management.html"><span class="cap-idx">06</span><span class="cap-name">Corporate Wellness Solutions</span><span class="cap-note">Occupational Health · Wellbeing</span><span class="cap-arrow"><i data-lucide="arrow-up-right"></i></span></a></li>
+      <li><a class="cap-row" href="consulting-services.html"><span class="cap-idx">07</span><span class="cap-name">Financial &amp; Technology Consulting</span><span class="cap-note">Advisory · Systems · Digital</span><span class="cap-arrow"><i data-lucide="arrow-up-right"></i></span></a></li>
+      <li><a class="cap-row" href="consulting-services.html"><span class="cap-idx">08</span><span class="cap-name">Business Transformation Support</span><span class="cap-note">Change · Performance · Growth</span><span class="cap-arrow"><i data-lucide="arrow-up-right"></i></span></a></li>
+    </ul>
+    <p class="cap-hint" data-reveal>Select a capability to explore the matching service</p>
+  </div>
+  <div class="cap-preview" id="capPreview" aria-hidden="true">
+    <div class="duo"><img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=700&q=80" alt=""></div>
+    <div class="duo"><img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=700&q=80" alt=""></div>
+    <div class="duo"><img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=700&q=80" alt=""></div>
+    <div class="duo"><img src="https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&w=700&q=80" alt=""></div>
+    <div class="duo"><img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=700&q=80" alt=""></div>
+    <div class="duo"><img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=700&q=80" alt=""></div>
+    <div class="duo"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=700&q=80" alt=""></div>
+    <div class="duo"><img src="https://images.unsplash.com/photo-1454165205744-3b78555e5572?auto=format&fit=crop&w=700&q=80" alt=""></div>
+  </div>
+</section> -->
+
+<!-- ================= WHAT MAKES US DIFFERENT (horizontal cards — alternate design) ================= -->
+<section class="section dark" id="different-cards">
+  <div class="container">
+    <div class="sec-head split" data-reveal>
+      <div>
+        <span class="eyebrow">What Makes AVCADO'S Different</span>
+        <h2 class="sec-title">One Team <em>Multiple capabilities</em></h2>
+      </div>
+      <p class="side">The capabilities organizations usually assemble from five different partners — brought under a single accountable structure.</p>
+    </div>
+    <div class="h-nav" data-reveal>
+      <span class="h-count" id="hCount">01 / 08</span>
+      <div class="h-arrows">
+        <button class="h-arrow" id="hPrev" aria-label="Previous cards"><i data-lucide="arrow-left"></i></button>
+        <button class="h-arrow" id="hNext" aria-label="Next cards"><i data-lucide="arrow-right"></i></button>
+      </div>
+    </div>
+    <div class="h-wrap" data-reveal style="--d:.08s">
+      <div class="h-rail" id="hRail" tabindex="0" role="group" aria-label="Capability cards — use arrow keys to browse">
+        <article class="h-card">
+          <div class="duo h-img"><img loading="lazy" src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=700&q=80" alt="Consulting"></div>
+          <div class="h-body">
+            <div class="h-top"><span class="h-num">✦ 01</span><span class="h-ic"><i data-lucide="compass"></i></span></div>
+            <h3>Consulting Expertise</h3>
+            <p>Strategy, advisory and organizational transformation grounded in deep industry knowledge — from diagnosis to boardroom decision.</p>
+            <a class="h-link" href="consulting-services.html">Explore service <i data-lucide="arrow-up-right"></i></a>
+          </div>
+        </article>
+        <article class="h-card">
+          <div class="duo h-img"><img loading="lazy" src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=700&q=80" alt="Project management"></div>
+          <div class="h-body">
+            <div class="h-top"><span class="h-num">✦ 02</span><span class="h-ic"><i data-lucide="clipboard-list"></i></span></div>
+            <h3>Project Management Consultancy</h3>
+            <p>Planning, scheduling, budgeting and vendor governance that keep critical projects on time and on budget.</p>
+            <a class="h-link" href="projects-engineering.html">Explore service <i data-lucide="arrow-up-right"></i></a>
+          </div>
+        </article>
+        <article class="h-card">
+          <div class="duo h-img"><img loading="lazy" src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=700&q=80" alt="Engineering"></div>
+          <div class="h-body">
+            <div class="h-top"><span class="h-num">✦ 03</span><span class="h-ic"><i data-lucide="hard-hat"></i></span></div>
+            <h3>Engineering &amp; Infrastructure Solutions</h3>
+            <p>Architecture, civil, MEP and retrofit capabilities that take concepts from drawing to commissioned reality.</p>
+            <a class="h-link" href="projects-engineering.html">Explore service <i data-lucide="arrow-up-right"></i></a>
+          </div>
+        </article>
+        <article class="h-card">
+          <div class="duo h-img"><img loading="lazy" src="https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&w=700&q=80" alt="Healthcare"></div>
+          <div class="h-body">
+            <div class="h-top"><span class="h-num">✦ 04</span><span class="h-ic"><i data-lucide="stethoscope"></i></span></div>
+            <h3>Healthcare Management Consulting</h3>
+            <p>Hospital planning, operations, audits and turnaround programs built on real clinical-operations experience.</p>
+            <a class="h-link" href="healthcare-solutions.html">Explore service <i data-lucide="arrow-up-right"></i></a>
+          </div>
+        </article>
+        <article class="h-card">
+          <div class="duo h-img"><img loading="lazy" src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=700&q=80" alt="Facility management"></div>
+          <div class="h-body">
+            <div class="h-top"><span class="h-num">✦ 05</span><span class="h-ic"><i data-lucide="building-2"></i></span></div>
+            <h3>Facility Management Services</h3>
+            <p>Technical operations, housekeeping and maintenance programs that keep facilities performing at their best.</p>
+            <a class="h-link" href="facility-management.html">Explore service <i data-lucide="arrow-up-right"></i></a>
+          </div>
+        </article>
+        <article class="h-card">
+          <div class="duo h-img"><img loading="lazy" src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=700&q=80" alt="Corporate wellness"></div>
+          <div class="h-body">
+            <div class="h-top"><span class="h-num">✦ 06</span><span class="h-ic"><i data-lucide="heart-pulse"></i></span></div>
+            <h3>Corporate Wellness Solutions</h3>
+            <p>Occupational health and wellbeing programs that protect people and improve productivity.</p>
+            <a class="h-link" href="facility-management.html">Explore service <i data-lucide="arrow-up-right"></i></a>
+          </div>
+        </article>
+        <article class="h-card">
+          <div class="duo h-img"><img loading="lazy" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=700&q=80" alt="Finance and technology"></div>
+          <div class="h-body">
+            <div class="h-top"><span class="h-num">✦ 07</span><span class="h-ic"><i data-lucide="cpu"></i></span></div>
+            <h3>Financial &amp; Technology Consulting</h3>
+            <p>Financial advisory and technology strategy that modernize systems and sharpen decision-making.</p>
+            <a class="h-link" href="consulting-services.html">Explore service <i data-lucide="arrow-up-right"></i></a>
+          </div>
+        </article>
+        <article class="h-card">
+          <div class="duo h-img"><img loading="lazy" src="https://images.unsplash.com/photo-1454165205744-3b78555e5572?auto=format&fit=crop&w=700&q=80" alt="Business transformation"></div>
+          <div class="h-body">
+            <div class="h-top"><span class="h-num">✦ 08</span><span class="h-ic"><i data-lucide="trending-up"></i></span></div>
+            <h3>Business Transformation Support</h3>
+            <p>Change management and performance improvement that turn initiatives into lasting results.</p>
+            <a class="h-link" href="consulting-services.html">Explore service <i data-lucide="arrow-up-right"></i></a>
+          </div>
+        </article>
+      </div>
+      <div class="h-fade" aria-hidden="true"></div>
+    </div>
+    <div class="h-progress" data-reveal><span class="h-track"><span class="h-fill" id="hFill"></span></span></div>
+  </div>
+</section>
+
+<!-- ================= OUR CORE SERVICES ================= -->
+<section class="section" id="services">
+  <div class="container">
+    <div class="sec-head split" data-reveal>
+      <div>
+        <span class="eyebrow">Our Core Services</span>
+        <h2 class="sec-title">Comprehensive solutions for <em>modern</em> organizations</h2>
+      </div>
+      <p class="side">Six integrated practice areas — hover or tap a panel to explore each one, and unfold the full service list inside.</p>
+    </div>
+    <div class="svc-wrap" id="svcWrap" data-reveal style="--d:.1s">
+      <article class="svc-panel active" tabindex="0">
+        <div class="svc-bg"><img loading="lazy" src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80" alt=""></div>
+        <div class="svc-rail"><span class="svc-num">01</span><span class="svc-vtitle">Consulting Services</span><span class="svc-chev"><i data-lucide="chevron-down"></i></span></div>
+        <div class="svc-body">
+          <span class="svc-tag">Advise</span>
+          <h3>Consulting Services</h3>
+          <p>Strategic business consulting, healthcare consulting, financial advisory, HR consulting, technology consulting, industrial consulting and organizational transformation services.</p>
+          <div class="svc-subs">
+            <a href="consulting-services.html#business-consulting">Business Consulting</a>
+            <a href="consulting-services.html#healthcare-consulting">Healthcare Consulting</a>
+            <a href="consulting-services.html#financial-consulting">Financial Consulting</a>
+            <a href="consulting-services.html#hr-training">HR &amp; Training</a>
+            <a href="consulting-services.html#technology-consulting">Technology Consulting</a>
+            <a href="consulting-services.html#industrial-consulting">Industrial Consulting</a>
+          </div>
+          <button class="svc-more"><span>Learn more</span><i data-lucide="plus"></i></button>
+        </div>
+      </article>
+      <article class="svc-panel" tabindex="0">
+        <div class="svc-bg"><img loading="lazy" src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=900&q=80" alt=""></div>
+        <div class="svc-rail"><span class="svc-num">02</span><span class="svc-vtitle">Project Management Consultancy</span><span class="svc-chev"><i data-lucide="chevron-down"></i></span></div>
+        <div class="svc-body">
+          <span class="svc-tag">Govern</span>
+          <h3>Project Management Consultancy (PMC)</h3>
+          <p>End-to-end project planning, scheduling, budgeting, vendor management, value engineering, compliance management and project delivery support.</p>
+          <div class="svc-subs">
+            <a href="projects-engineering.html#pmc">Planning &amp; Scheduling</a>
+            <a href="projects-engineering.html#pmc">Budgeting &amp; Cost Control</a>
+            <a href="projects-engineering.html#pmc">Vendor Management</a>
+            <a href="projects-engineering.html#pmc">Value Engineering</a>
+            <a href="projects-engineering.html#pmc">Compliance &amp; Delivery</a>
+          </div>
+          <button class="svc-more"><span>Learn more</span><i data-lucide="plus"></i></button>
+        </div>
+      </article>
+      <article class="svc-panel" tabindex="0">
+        <div class="svc-bg"><img loading="lazy" src="https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?auto=format&fit=crop&w=900&q=80" alt=""></div>
+        <div class="svc-rail"><span class="svc-num">03</span><span class="svc-vtitle">Corporate Projects &amp; Engineering</span><span class="svc-chev"><i data-lucide="chevron-down"></i></span></div>
+        <div class="svc-body">
+          <span class="svc-tag">Build</span>
+          <h3>Corporate Projects &amp; Engineering</h3>
+          <p>Architecture, interiors, civil construction, MEP solutions, retrofit projects, maintenance services and infrastructure development.</p>
+          <div class="svc-subs">
+            <a href="projects-engineering.html#corporate-projects-execution">Corporate Projects &amp; Execution</a>
+            <a href="projects-engineering.html#architecture-interiors">Architecture &amp; Interiors</a>
+            <a href="projects-engineering.html#civil-infrastructure">Civil &amp; Infrastructure</a>
+            <a href="projects-engineering.html#mep-engineering">MEP Engineering</a>
+            <a href="projects-engineering.html#retrofit-maintenance">Retrofit &amp; Maintenance</a>
+          </div>
+          <button class="svc-more"><span>Learn more</span><i data-lucide="plus"></i></button>
+        </div>
+      </article>
+      <article class="svc-panel" tabindex="0">
+        <div class="svc-bg"><img loading="lazy" src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=900&q=80" alt=""></div>
+        <div class="svc-rail"><span class="svc-num">04</span><span class="svc-vtitle">Healthcare Solutions</span><span class="svc-chev"><i data-lucide="chevron-down"></i></span></div>
+        <div class="svc-body">
+          <span class="svc-tag">Care</span>
+          <h3>Healthcare Solutions</h3>
+          <p>Hospital setup, healthcare consulting, operational management, audits, branding, diagnostics consulting, corporate clinics and wellness centres.</p>
+          <div class="svc-subs">
+            <a href="healthcare-solutions.html#hospital-consulting">Hospital Consulting</a>
+            <a href="healthcare-solutions.html#hospital-setup-operations">Hospital Setup &amp; Operations</a>
+            <a href="healthcare-solutions.html#diagnostic-centres">Diagnostic Centres &amp; Policlinics</a>
+            <a href="healthcare-solutions.html#corporate-clinics">Corporate Clinics</a>
+            <a href="healthcare-solutions.html#ayurveda-wellness">Ayurveda &amp; Wellness Centres</a>
+          </div>
+          <button class="svc-more"><span>Learn more</span><i data-lucide="plus"></i></button>
+        </div>
+      </article>
+      <article class="svc-panel" tabindex="0">
+        <div class="svc-bg"><img loading="lazy" src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=900&q=80" alt=""></div>
+        <div class="svc-rail"><span class="svc-num">05</span><span class="svc-vtitle">Facility Management</span><span class="svc-chev"><i data-lucide="chevron-down"></i></span></div>
+        <div class="svc-body">
+          <span class="svc-tag">Operate</span>
+          <h3>Facility Management</h3>
+          <p>Technical operations, housekeeping services, maintenance programs, occupational healthcare, corporate wellness and facility support services.</p>
+          <div class="svc-subs">
+            <a href="facility-management.html#technical-operations">Technical Operations</a>
+            <a href="facility-management.html#corporate-wellness">Corporate Wellness</a>
+            <a href="facility-management.html#housekeeping-services">Housekeeping Services</a>
+            <a href="facility-management.html#amc-maintenance">AMC &amp; Maintenance</a>
+          </div>
+          <button class="svc-more"><span>Learn more</span><i data-lucide="plus"></i></button>
+        </div>
+      </article>
+      <article class="svc-panel" tabindex="0">
+        <div class="svc-bg"><img loading="lazy" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80" alt=""></div>
+        <div class="svc-rail"><span class="svc-num">06</span><span class="svc-vtitle">Marketing &amp; Branding</span><span class="svc-chev"><i data-lucide="chevron-down"></i></span></div>
+        <div class="svc-body">
+          <span class="svc-tag">Grow</span>
+          <h3>Marketing &amp; Branding</h3>
+          <p>Brand strategy, healthcare marketing, digital marketing, communication strategy, signage solutions and growth-focused marketing support.</p>
+          <div class="svc-subs">
+            <a href="marketing-branding.html#brand-strategy">Brand Strategy</a>
+            <a href="marketing-branding.html#digital-marketing">Digital Marketing</a>
+            <a href="marketing-branding.html#healthcare-marketing">Healthcare Marketing</a>
+            <a href="marketing-branding.html#signage-branding">Signage &amp; Branding Solutions</a>
+          </div>
+          <button class="svc-more"><span>Learn more</span><i data-lucide="plus"></i></button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= INDUSTRIES ================= -->
+<section class="section" id="industries" style="padding-top:0">
+  <div class="container">
+    <div class="sec-head split" data-reveal>
+      <div>
+        <span class="eyebrow">Industries We Serve</span>
+        <h2 class="sec-title">Industry expertise that <em>creates results</em></h2>
+      </div>
+      <p class="side">Every engagement is customized to the requirements of the client, the industry and the business environment.</p>
+    </div>
+    <div class="ind-grid">
+      <div class="ind-list" data-reveal>
+        <button class="ind-item on"><span class="ind-idx">01</span><span class="ind-name">Healthcare</span><span class="ind-arrow"><i data-lucide="arrow-up-right"></i></span></button>
+        <button class="ind-item"><span class="ind-idx">02</span><span class="ind-name">Corporate &amp; IT</span><span class="ind-arrow"><i data-lucide="arrow-up-right"></i></span></button>
+        <button class="ind-item"><span class="ind-idx">03</span><span class="ind-name">Manufacturing</span><span class="ind-arrow"><i data-lucide="arrow-up-right"></i></span></button>
+        <button class="ind-item"><span class="ind-idx">04</span><span class="ind-name">Hospitality</span><span class="ind-arrow"><i data-lucide="arrow-up-right"></i></span></button>
+        <button class="ind-item"><span class="ind-idx">05</span><span class="ind-name">Government &amp; Institutions</span><span class="ind-arrow"><i data-lucide="arrow-up-right"></i></span></button>
+        <div class="ind-cta">
+          <a href="industries.html" class="btn btn-ghost"><span class="bl"><span>Explore Industries</span><span>Explore Industries</span></span><i data-lucide="arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="ind-preview" data-reveal style="--d:.12s">
+        <div class="ind-media">
+          <div class="duo on"><img loading="lazy" src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1000&q=80" alt="Healthcare"></div>
+          <div class="duo"><img loading="lazy" src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1000&q=80" alt="Corporate & IT"></div>
+          <div class="duo"><img loading="lazy" src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1000&q=80" alt="Manufacturing"></div>
+          <div class="duo"><img loading="lazy" src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=80" alt="Hospitality"></div>
+          <div class="duo"><img loading="lazy" src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1000&q=80" alt="Government & Institutions"></div>
+        </div>
+        <div class="ind-caps">
+          <div class="ind-cap on"><p>Hospitals, healthcare groups, clinics, diagnostic centres, wellness centres and healthcare investors.</p><span class="ind-count">01 / 05</span></div>
+          <div class="ind-cap"><p>Technology parks, corporate campuses, multinational organizations, GCCs and commercial facilities.</p><span class="ind-count">02 / 05</span></div>
+          <div class="ind-cap"><p>Production facilities, industrial operations, engineering organizations and process-driven industries.</p><span class="ind-count">03 / 05</span></div>
+          <div class="ind-cap"><p>Hotels, resorts, wellness retreats, Ayurveda centres and hospitality infrastructure projects.</p><span class="ind-count">04 / 05</span></div>
+          <div class="ind-cap"><p>Government agencies, educational institutions, public infrastructure projects and institutional facilities.</p><span class="ind-count">05 / 05</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHY (DARK) ================= -->
+<section class="section dark" id="why">
+  <div class="container">
+    <div class="stats" data-reveal>
+      <div class="stat"><span class="stat-num" data-count="10" data-pad="2">00</span><span class="stat-label">Years of  &amp; experience</span></div>
+      <div class="stat"><span class="stat-num" data-count="120" data-pad="2">00+</span><span class="stat-label">Multi domain projects completed</span></div>
+      <div class="stat"><span class="stat-num" data-count="5" data-pad="2">00</span><span class="stat-label">Industry sectors served end to end</span></div>
+      <div class="stat"><span class="stat-num" data-count="360" data-suffix="°">0°</span><span class="stat-label">Integrated delivery — advisory to operations</span></div>
+    </div>
+    <div data-reveal>
+      <span class="eyebrow">Why Organizations Choose AVCADO'S</span>
+      <h2 class="sec-title">Built on expertise. <em>Driven by results.</em></h2>
+    </div>
+    <div class="wrows">
+      <div class="wrow" data-reveal><span class="widx">01</span><h3>Multidisciplinary Team</h3><p>Business consultants, healthcare specialists, engineers, architects, financial experts, project managers and operational leaders working together.</p></div>
+      <div class="wrow" data-reveal style="--d:.05s"><span class="widx">02</span><h3>Strategy + Execution</h3><p>We move beyond recommendations and actively support implementation and delivery.</p></div>
+      <div class="wrow" data-reveal style="--d:.1s"><span class="widx">03</span><h3>India &amp; UAE Presence</h3><p>Supporting organizations across India and the Middle East through dedicated consulting and operational teams.</p></div>
+      <div class="wrow" data-reveal style="--d:.15s"><span class="widx">04</span><h3>Industry-Specific Solutions</h3><p>Every engagement is customized to the unique requirements of the client, industry and business environment.</p></div>
+      <div class="wrow" data-reveal style="--d:.2s"><span class="widx">05</span><h3>Long-Term Partnership Approach</h3><p>We focus on creating sustainable systems, measurable outcomes and long-term value.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LEADERSHIP ================= -->
+<section class="section" id="leadership">
+  <div class="container lead-grid">
+    <div data-reveal>
+      <span class="eyebrow">Leadership</span>
+      <h2 class="sec-title">Guided by <em>experienced</em> professionals</h2>
+      <p class="tx">AVCADO'S is led by an experienced team of business leaders, healthcare professionals, engineers, financial consultants, HR specialists and project management experts with decades of combined industry experience.</p>
+      <p class="tx">Our leadership team has successfully supported organizations across healthcare, infrastructure, manufacturing, corporate, hospitality and institutional sectors.</p>
+      <a href="about.html#leadership-team" class="btn btn-ghost" style="margin-top:26px"><span class="bl"><span>Meet Our Leadership Team</span><span>Meet Our Leadership Team</span></span><i data-lucide="arrow-right"></i></a>
+    </div>
+    <div class="lead-visual" data-reveal style="--d:.15s">
+      <div class="lv-ring"></div>
+      <div class="duo lv-main"><img loading="lazy" src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=800&q=80" alt="Leadership at work"></div>
+      <div class="duo lv-small"><img loading="lazy" src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=600&q=80" alt="Project review"></div>
+      <span class="lv-cap">Healthcare · Infrastructure · Corporate · Hospitality · Institutional</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= APPROACH ================= -->
+<section class="section tint" id="approach">
+  <div class="container">
+    <div class="sec-head split" data-reveal>
+      <div>
+        <span class="eyebrow">Our Approach</span>
+        <h2 class="sec-title">A proven framework for <em>business success</em></h2>
+      </div>
+      <p class="side">Five disciplined stages — one continuous cycle from understanding your business to driving continuous improvement.</p>
+    </div>
+    <div class="rail" id="approachWrap">
+      <div class="rail-line"><span class="rail-fill"></span></div>
+            <ol class="steps">
+        <li class="step"><span class="step-dot"></span><div class="step-inner"><i>Stage 01</i><h3>Discover</h3><p>Understanding your business, challenges, opportunities and objectives.</p></div></li>
+        <li class="step"><span class="step-dot"></span><div class="step-inner"><i>Stage 02</i><h3>Assess</h3><p>Conducting detailed studies, audits, evaluations and strategic analysis.</p></div></li>
+        <li class="step"><span class="step-dot"></span><div class="step-inner"><i>Stage 03</i><h3>Strategize</h3><p>Developing customized solutions aligned with business goals.</p></div></li>
+        <li class="step"><span class="step-dot"></span><div class="step-inner"><i>Stage 04</i><h3>Execute</h3><p>Implementing projects, systems and operational improvements.</p></div></li>
+        <li class="step"><span class="step-dot"></span><div class="step-inner"><i>Stage 05</i><h3>Optimize</h3><p>Monitoring performance and driving continuous improvement.</p></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CLIENT SUCCESS ================= -->
+<section class="section" id="success">
+  <div class="container">
+    <div class="success-frame" data-reveal>
+      <div class="suc-left">
+        <span class="eyebrow">Client Success</span>
+        <h2 class="sec-title">Delivering value <em>across industries</em></h2>
+        <p>Our teams have supported organizations in:</p>
+        <a href="case-studies.html" class="btn btn-solid"><span class="bl"><span>View Case Studies</span><span>View Case Studies</span></span><i data-lucide="arrow-right"></i></a>
+      </div>
+      <div class="suc-list">
+        <div class="suc-item"><span class="ic"><i data-lucide="check"></i></span>Healthcare Infrastructure Development</div>
+        <div class="suc-item"><span class="ic"><i data-lucide="check"></i></span>Hospital Operations &amp; Turnaround Programs</div>
+        <div class="suc-item"><span class="ic"><i data-lucide="check"></i></span>Corporate Wellness &amp; Occupational Healthcare</div>
+        <div class="suc-item"><span class="ic"><i data-lucide="check"></i></span>Engineering &amp; Infrastructure Projects</div>
+        <div class="suc-item"><span class="ic"><i data-lucide="check"></i></span>Facility Management Programs</div>
+        <div class="suc-item"><span class="ic"><i data-lucide="check"></i></span>Business Process Improvement Initiatives</div>
+        <div class="suc-item"><span class="ic"><i data-lucide="check"></i></span>Digital Transformation Projects</div>
+        <div class="suc-item"><span class="ic"><i data-lucide="check"></i></span>Organizational Development Programs</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= INSIGHTS (single latest article) ================= -->
+<section class="section" id="insights" style="padding-top:0">
+  <div class="container">
+    <div class="sec-head split" data-reveal>
+      <div>
+        <span class="eyebrow">Insights &amp; Knowledge</span>
+        <h2 class="sec-title">Perspectives that help <em>businesses grow</em></h2>
+      </div>
+      <p class="side">Expert insights, industry trends, operational strategies, healthcare management perspectives, project management best practices and business transformation ideas from AVCADO'S experts.</p>
+    </div>
+    <div class="ins-bar" data-reveal>
+      <div class="chips" role="tablist" aria-label="Filter insights">
+        <button class="chip on" data-f="Insight">Insights</button>
+        <button class="chip" data-f="Case Study">Case Studies</button>
+      </div>
+      <a href="#" class="btn btn-ghost btn-sm" id="readArticle"><span class="bl"><span>Read Articles</span><span>Read Articles</span></span><i data-lucide="arrow-right"></i></a>
+    </div>
+    <div class="ins-grid" id="insGrid" data-reveal style="--d:.08s"></div>
+  </div>
+</section>
+
+<!-- ================= CTA / CONTACT ================= -->
+<section class="cta-sec dark" id="contact">
+  <span class="cta-word" aria-hidden="true">AVCADO'S</span>
+  <div class="container">
+    <span class="eyebrow" data-reveal>Start a Conversation</span>
+    <h2 data-reveal style="--d:.05s">Ready to discuss your <em>next project?</em></h2>
+    <p class="cta-lead" data-reveal style="--d:.1s">Whether you are planning a new healthcare facility, expanding operations, optimizing business performance, upgrading infrastructure or seeking strategic consulting support — AVCADO'S is ready to help.</p>
+    <p class="cta-line" data-reveal style="--d:.15s">Let's build something meaningful together.</p>
+    <div class="cta-row" data-reveal style="--d:.2s">
+      <a href="#" class="btn btn-accent js-consult"><span class="bl"><span>Schedule a Consultation</span><span>Schedule a Consultation</span></span><i data-lucide="arrow-right"></i></a>
+      <a href="contact.html" class="btn btn-ghost-l"><span class="bl"><span>Contact Us</span><span>Contact Us</span></span><i data-lucide="mail"></i></a>
+    </div>
+    <div class="cta-contacts" data-reveal style="--d:.25s">
+      <div class="ctc"><i data-lucide="map-pin"></i><span><i>Offices</i><b>India Office&nbsp;&nbsp;·&nbsp;&nbsp;UAE Office</b></span></div>
+      <div class="ctc"><i data-lucide="phone"></i><span><i>Phone</i><b><a href="tel:+910000000000">+91 XXXXX XXXXX</a></b></span></div>
+      <div class="ctc"><i data-lucide="mail"></i><span><i>Email</i><b><a href="mailto:info@avcados.org">info@avcados.org</a></b></span></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ================= FOOTER (mirrors header menu) ================= -->
+<footer>
+  <div class="container">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <span class="foot-logo-chip">
+          <img class="logo-img" src="https://z-cdn-media.chatglm.cn/files/b8d15b96-913a-428f-8921-035528bebe59.png?auth_key=1887508285-fb71227fce874d63ac8da4c4eb9decf1-0-930d358e45bc6cf99cfbeea2735811b5" alt="AVCADO'S" onerror="this.closest('.foot-logo-chip').classList.add('no-img')">
+          <span class="logo-fb" aria-hidden="true">
+            <span class="fb-word">AVCAD<svg class="fb-avo" viewBox="0 0 32 42"><defs><linearGradient id="avog2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2F9B6E"/><stop offset="1" stop-color="#0E3B2C"/></linearGradient></defs><path d="M16 1C9.5 1 5.5 8.2 5.5 16.5 5.5 28.2 10 41 16 41s10.5-12.8 10.5-24.5C26.5 8.2 22.5 1 16 1Z" fill="url(#avog2)"/><path d="M16 6.2c-4.5 0-7.4 5.5-7.4 12 0 8.6 3.1 17.6 7.4 17.6s7.4-9 7.4-17.6c0-6.5-2.9-12-7.4-12Z" fill="#C8DE6A"/><circle cx="16" cy="24.5" r="4.8" fill="#155A41"/></svg>&rsquo;S</span>
+            <small>CONSULTING · EXECUTION</small>
+          </span>
+        </span>
+        <p>A multidisciplinary consulting, project management, engineering, healthcare and facility management organization serving clients across India and the UAE.</p>
+        <div class="foot-quick">
+          <b>✦ &nbsp;Contact</b>
+          India Office · UAE Office<br>
+          <a href="tel:+910000000000">+91 XXXXX XXXXX</a> · <a href="mailto:info@avcados.org">info@avcados.org</a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h4>About Us</h4>
+        <a href="about.html#our-story">Our Story</a>
+        <a href="about.html#leadership-team">Leadership Team</a>
+        <a href="about.html#global-presence">Global Presence</a>
+      </div>
+      <div class="foot-col">
+        <h4>Industries</h4>
+        <a href="industries.html#healthcare">Healthcare</a>
+        <a href="industries.html#corporate-it">Corporate &amp; IT</a>
+        <a href="industries.html#manufacturing">Manufacturing</a>
+        <a href="industries.html#hospitality">Hospitality</a>
+        <a href="industries.html#government-institutions">Government &amp; Institutions</a>
+      </div>
+      <div class="foot-col">
+        <h4>Company</h4>
+        <a href="index.html">Home</a>
+        <a href="case-studies.html">Case Studies</a>
+        <a href="insights.html">Insights</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+    </div>
+    <div class="foot-services">
+      <div class="fs-label">✦ &nbsp;Services</div>
+      <div class="fs-grid">
+        <div>
+          <a class="fs-cat" href="consulting-services.html">Consulting Services</a>
+          <a class="fs-sub" href="consulting-services.html#business-consulting">Business Consulting</a>
+          <a class="fs-sub" href="consulting-services.html#healthcare-consulting">Healthcare Consulting</a>
+          <a class="fs-sub" href="consulting-services.html#financial-consulting">Financial Consulting</a>
+          <a class="fs-sub" href="consulting-services.html#hr-training">HR &amp; Training</a>
+          <a class="fs-sub" href="consulting-services.html#technology-consulting">Technology Consulting</a>
+          <a class="fs-sub" href="consulting-services.html#industrial-consulting">Industrial Consulting</a>
+        </div>
+        <div>
+          <a class="fs-cat" href="projects-engineering.html">Projects &amp; Engineering</a>
+          <a class="fs-sub" href="projects-engineering.html#pmc">Project Management Consultancy (PMC)</a>
+          <a class="fs-sub" href="projects-engineering.html#corporate-projects-execution">Corporate Projects &amp; Execution</a>
+          <a class="fs-sub" href="projects-engineering.html#architecture-interiors">Architecture &amp; Interiors</a>
+          <a class="fs-sub" href="projects-engineering.html#civil-infrastructure">Civil &amp; Infrastructure</a>
+          <a class="fs-sub" href="projects-engineering.html#mep-engineering">MEP Engineering</a>
+          <a class="fs-sub" href="projects-engineering.html#retrofit-maintenance">Retrofit &amp; Maintenance</a>
+        </div>
+        <div>
+          <a class="fs-cat" href="facility-management.html">Facility Management</a>
+          <a class="fs-sub" href="facility-management.html#technical-operations">Technical Operations</a>
+          <a class="fs-sub" href="facility-management.html#corporate-wellness">Corporate Wellness</a>
+          <a class="fs-sub" href="facility-management.html#housekeeping-services">Housekeeping Services</a>
+          <a class="fs-sub" href="facility-management.html#amc-maintenance">AMC &amp; Maintenance</a>
+        </div>
+        <div>
+          <a class="fs-cat" href="healthcare-solutions.html">Healthcare Solutions</a>
+          <a class="fs-sub" href="healthcare-solutions.html#hospital-consulting">Hospital Consulting</a>
+          <a class="fs-sub" href="healthcare-solutions.html#hospital-setup-operations">Hospital Setup &amp; Operations</a>
+          <a class="fs-sub" href="healthcare-solutions.html#diagnostic-centres">Diagnostic Centres &amp; Policlinics</a>
+          <a class="fs-sub" href="healthcare-solutions.html#corporate-clinics">Corporate Clinics</a>
+          <a class="fs-sub" href="healthcare-solutions.html#ayurveda-wellness">Ayurveda &amp; Wellness Centres</a>
+        </div>
+        <div>
+          <a class="fs-cat" href="marketing-branding.html">Marketing &amp; Branding</a>
+          <a class="fs-sub" href="marketing-branding.html#brand-strategy">Brand Strategy</a>
+          <a class="fs-sub" href="marketing-branding.html#digital-marketing">Digital Marketing</a>
+          <a class="fs-sub" href="marketing-branding.html#healthcare-marketing">Healthcare Marketing</a>
+          <a class="fs-sub" href="marketing-branding.html#signage-branding">Signage &amp; Branding Solutions</a>
+        </div>
+        <div>
+          <a class="fs-cat" href="outsourcing-services.html">Outsourcing Services</a>
+          <a class="fs-sub" href="outsourcing-services.html#finance-accounting-bpo">Finance &amp; Accounting BPO</a>
+          <a class="fs-sub" href="outsourcing-services.html#hr-outsourcing">HR Outsourcing</a>
+          <a class="fs-sub" href="outsourcing-services.html#marketing-outsourcing">Marketing Outsourcing</a>
+        </div>
+        <div>
+          <a class="fs-cat" href="sustainability.html">Sustainability</a>
+          <a class="fs-sub" href="sustainability.html#waste-management">Waste Management</a>
+          <a class="fs-sub" href="sustainability.html#e-waste-recycling">E-Waste Recycling</a>
+          <a class="fs-sub" href="sustainability.html#industrial-recycling">Industrial Recycling</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>© <span id="yr"></span> AVCADO'S — Multidisciplinary Consulting · India | UAE</span>
+      <nav aria-label="Company">
+        <a href="index.html">Home</a><a href="about.html">About Us</a><a href="case-studies.html">Case Studies</a><a href="insights.html">Insights</a><a href="contact.html">Contact Us</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<!-- Modal / Toast / Back-to-top -->
+<div class="overlay" id="modalOverlay" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-label="Dialog">
+    <button class="modal-close" id="modalClose" aria-label="Close dialog"><i data-lucide="x"></i></button>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+<div class="toast" id="toast" role="status"><span id="toastIcon"></span><span id="toastMsg"></span></div>
+<button id="toTop" aria-label="Back to top"><i data-lucide="arrow-up"></i></button>
+
+<script>
+/* ---------- helpers ---------- */
+const $=(s,c=document)=>c.querySelector(s);
+const $$=(s,c=document)=>[...c.querySelectorAll(s)];
+const fine=matchMedia('(hover:hover) and (pointer:fine)').matches;
+const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+lucide.createIcons();
+ $('#yr').textContent=new Date().getFullYear();
+
+/* ---------- header ---------- */
+const header=$('#header');
+addEventListener('scroll',()=>header.classList.toggle('scrolled',scrollY>40),{passive:true});
+
+/* ---------- mobile drawer ---------- */
+const burger=$('#burger'),mm=$('#mobileMenu');
+const mmItems=$$('.mm-nav>*');
+function openMM(){
+  mm.classList.add('open');burger.classList.add('active');
+  document.body.style.overflow='hidden';
+  burger.setAttribute('aria-expanded','true');mm.setAttribute('aria-hidden','false');
+  mmItems.forEach((el,i)=>el.style.transitionDelay=(.05*i+.06)+'s');
+}
+function closeMM(){
+  mm.classList.remove('open');burger.classList.remove('active');
+  document.body.style.overflow='';
+  burger.setAttribute('aria-expanded','false');mm.setAttribute('aria-hidden','true');
+  mmItems.forEach(el=>el.style.transitionDelay='0s');
+}
+burger.addEventListener('click',()=>mm.classList.contains('open')?closeMM():openMM());
+ $('.mm-close').addEventListener('click',closeMM);
+ $$('#mobileMenu a').forEach(a=>a.addEventListener('click',closeMM));
+ $$('.mm-parent').forEach(btn=>btn.addEventListener('click',()=>{
+  const open=btn.parentElement.classList.toggle('open');
+  btn.setAttribute('aria-expanded',open);
+}));
+
+/* ---------- hero intro + parallax ---------- */
+requestAnimationFrame(()=>requestAnimationFrame(()=>document.body.classList.add('loaded')));
+const heroImg=$('.hero-bg img');
+if(!reduced){
+  addEventListener('scroll',()=>{
+    if(scrollY<innerHeight)heroImg.style.transform=`translateY(${scrollY*.22}px) scale(1.06)`;
+  },{passive:true});
+}
+
+/* ---------- scroll reveal ---------- */
+const rio=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){e.target.classList.add('in');rio.unobserve(e.target)}
+}),{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+ $$('[data-reveal]').forEach(el=>rio.observe(el));
+
+/* ---------- counters ---------- */
+const cio=new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting)return;cio.unobserve(e.target);
+  const el=e.target,target=+el.dataset.count,suf=el.dataset.suffix||'',pad=+(el.dataset.pad||0),t0=performance.now();
+  (function tick(t){
+    const p=Math.min((t-t0)/1500,1),v=Math.round(target*(1-Math.pow(1-p,3)));
+    el.textContent=String(v).padStart(pad,'0')+suf;
+    if(p<1)requestAnimationFrame(tick);
+  })(t0);
+}),{threshold:.6});
+ $$('.stat-num').forEach(el=>cio.observe(el));
+
+/* ---------- who we are video ---------- */
+const videoCard=$('#videoCard'),vid=$('#whoVideo');
+vid.muted=true;
+videoCard.classList.add('muted');
+let vErrs=0;
+const vSrcs=$$('source',vid);
+vid.addEventListener('error',e=>{
+  if(e.target.tagName==='SOURCE'){vErrs++;if(vErrs>=vSrcs.length)videoCard.classList.add('v-failed');}
+  else videoCard.classList.add('v-failed');
+},true);
+function vToggle(){vid.paused?vid.play().catch(()=>{}):vid.pause();}
+function vMute(){vid.muted=!vid.muted;videoCard.classList.toggle('muted',vid.muted);}
+ $('.v-play').addEventListener('click',vToggle);
+ $$('.v-btn').forEach(b=>b.addEventListener('click',()=>b.dataset.act==='toggle'?vToggle():vMute()));
+vid.addEventListener('play',()=>videoCard.classList.add('playing'));
+vid.addEventListener('pause',()=>videoCard.classList.remove('playing'));
+if(!reduced){
+  new IntersectionObserver((es,o)=>es.forEach(e=>{
+    if(e.isIntersecting){vid.play().catch(()=>{});o.unobserve(e.target);}
+  }),{threshold:.35}).observe(videoCard);
+}
+
+/* ---------- capability list: cursor preview ---------- */
+const capRows=$$('.cap-row'),capPrev=$('#capPreview'),capImgs=$$('#capPreview .duo');
+if(fine.matches&&innerWidth>=1024&&!reduced){
+  let x=innerWidth/2,y=innerHeight/2,tx=x,ty=y;
+  capRows.forEach((r,i)=>r.addEventListener('mouseenter',()=>{
+    capImgs.forEach((im,j)=>im.classList.toggle('on',i===j));
+    capPrev.classList.add('show');
+  }));
+  const list=$('.caps-list');
+  list.addEventListener('mousemove',e=>{tx=e.clientX+26;ty=e.clientY-105;});
+  list.addEventListener('mouseleave',()=>capPrev.classList.remove('show'));
+  (function loop(){
+    const dx=(tx-x);
+    x+=dx*.13;y+=(ty-y)*.13;
+    const rot=Math.max(-7,Math.min(7,dx*.06));
+    capPrev.style.transform=`translate3d(${x}px,${y}px,0) rotate(${rot}deg)`;
+    requestAnimationFrame(loop);
+  })();
+}
+
+/* ---------- horizontal capability cards rail ---------- */
+const hRail=$('#hRail'),hPrev=$('#hPrev'),hNext=$('#hNext'),hFill=$('#hFill'),hCount=$('#hCount');
+const hCards=$$('.h-card',hRail);
+hCards.forEach(c=>$$('img',c).forEach(i=>i.draggable=false));
+function hUpdate(){
+  const max=hRail.scrollWidth-hRail.clientWidth;
+  hFill.style.width=(max>0?(hRail.scrollLeft/max*100):100)+'%';
+  let idx=0;
+  for(let i=0;i<hCards.length;i++){if(hCards[i].offsetLeft>=hRail.scrollLeft-6){idx=i;break;}idx=i;}
+  hCount.textContent=String(idx+1).padStart(2,'0')+' / '+String(hCards.length).padStart(2,'0');
+  hPrev.disabled=hRail.scrollLeft<4;
+  hNext.disabled=hRail.scrollLeft>max-4;
+}
+hRail.addEventListener('scroll',hUpdate,{passive:true});
+addEventListener('resize',hUpdate);
+function hStep(dir){
+  const w=hCards[0].offsetWidth+18;
+  hRail.scrollBy({left:dir*w,behavior:'smooth'});
+}
+hPrev.addEventListener('click',()=>hStep(-1));
+hNext.addEventListener('click',()=>hStep(1));
+let hDown=false,hX=0,hL=0,hMoved=false;
+hRail.addEventListener('pointerdown',e=>{
+  if(e.pointerType!=='mouse')return;
+  hDown=true;hMoved=false;hX=e.clientX;hL=hRail.scrollLeft;
+  hRail.classList.add('dragging');hRail.setPointerCapture(e.pointerId);
+});
+hRail.addEventListener('pointermove',e=>{
+  if(!hDown)return;
+  const dx=e.clientX-hX;
+  if(Math.abs(dx)>4)hMoved=true;
+  hRail.scrollLeft=hL-dx;
+});
+['pointerup','pointercancel'].forEach(ev=>hRail.addEventListener(ev,()=>{hDown=false;hRail.classList.remove('dragging');}));
+hRail.addEventListener('click',e=>{if(hMoved){e.preventDefault();e.stopPropagation();}},true);
+hRail.addEventListener('keydown',e=>{
+  if(e.key==='ArrowRight'){e.preventDefault();hStep(1);}
+  if(e.key==='ArrowLeft'){e.preventDefault();hStep(-1);}
+});
+hUpdate();
+
+/* ---------- services accordion ---------- */
+const panels=$$('.svc-panel');
+function setPanel(i){
+  panels.forEach((p,j)=>{
+    p.classList.toggle('active',i===j);
+    if(j!==i){
+      const subs=$('.svc-subs',p),more=$('.svc-more',p);
+      if(subs){subs.classList.remove('open');more.classList.remove('open');more.querySelector('span').textContent='Learn more';}
+    }
+  });
+}
+panels.forEach((p,i)=>{
+  p.addEventListener('click',e=>{if(e.target.closest('.svc-more')||e.target.closest('a'))return;setPanel(i)});
+  p.addEventListener('mouseenter',()=>{if(fine.matches)setPanel(i)});
+  p.addEventListener('focus',()=>setPanel(i));
+  $('.svc-more',p).addEventListener('click',()=>{
+    const more=$('.svc-more',p);
+    more.classList.toggle('open');
+    $('.svc-subs',p).classList.toggle('open');
+    more.querySelector('span').textContent=more.classList.contains('open')?'Close':'Learn more';
+  });
+});
+
+/* ---------- industries switcher ---------- */
+const indItems=$$('.ind-item'),indImgs=$$('.ind-media .duo'),indCaps=$$('.ind-cap');
+let indIdx=0,indVisible=false,indTouched=false;
+function setInd(i){
+  indIdx=i;
+  indItems.forEach((b,j)=>b.classList.toggle('on',j===i));
+  indImgs.forEach((im,j)=>im.classList.toggle('on',j===i));
+  indCaps.forEach((c,j)=>c.classList.toggle('on',j===i));
+}
+indItems.forEach((b,i)=>{
+  ['mouseenter','click','focus'].forEach(ev=>b.addEventListener(ev,()=>{indTouched=true;setInd(i)}));
+});
+new IntersectionObserver(es=>es.forEach(e=>indVisible=e.isIntersecting),{threshold:.25}).observe($('.ind-grid'));
+setInterval(()=>{if(indVisible&&!indTouched&&!document.hidden)setInd((indIdx+1)%5)},4200);
+setInd(0);
+
+/* ---------- approach rail (scroll-driven, pulsing dots) ---------- */
+const apWrap=$('#approachWrap'),apFill=$('.rail-fill'),apSteps=$$('.step');
+function apScroll(){
+  const r=apWrap.getBoundingClientRect();
+  let p=(innerHeight*.82-r.top)/(r.height*.9);
+  p=Math.max(0,Math.min(1,p));
+  const vert=matchMedia('(max-width:860px)').matches;
+  apFill.style.transform=vert?`scaleY(${p})`:`scaleX(${p})`;
+  apSteps.forEach((s,i)=>s.classList.toggle('on',p>(i+.55)/5));
+}
+addEventListener('scroll',apScroll,{passive:true});
+addEventListener('resize',apScroll);apScroll();
+
+/* ---------- modal system ---------- */
+const overlay=$('#modalOverlay'),mBody=$('#modalBody');
+function openModal(html){
+  mBody.innerHTML=html;
+  overlay.classList.add('open');
+  document.body.style.overflow='hidden';
+  lucide.createIcons();
+  const f=mBody.querySelector('input,select,textarea,button');
+  if(f)setTimeout(()=>f.focus(),120);
+}
+function closeModal(){overlay.classList.remove('open');document.body.style.overflow='';}
+overlay.addEventListener('click',e=>{if(e.target===overlay)closeModal()});
+ $('#modalClose').addEventListener('click',closeModal);
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeModal();closeMM();}});
+
+/* ---------- toast ---------- */
+let toastT;
+function toast(msg,icon='check'){
+  $('#toastMsg').textContent=msg;
+  $('#toastIcon').innerHTML=`<i data-lucide="${icon}"></i>`;
+  lucide.createIcons();
+  const t=$('#toast');
+  t.classList.add('show');
+  clearTimeout(toastT);
+  toastT=setTimeout(()=>t.classList.remove('show'),4200);
+}
+
+/* ---------- consultation form ---------- */
+function consultHTML(){
+  return `
+  <div class="m-eyebrow">✦ &nbsp;Book a Consultation</div>
+  <h3 class="m-title">Let's talk about your <em>next project</em></h3>
+  <p class="m-sub">Share a few details and our consulting team will get back to you within one business day.</p>
+  <form id="consultForm" novalidate>
+    <div class="f-row">
+      <div class="field"><label for="cf-name">Full name *</label><input id="cf-name" name="name" type="text" autocomplete="name"><span class="err">Please enter your name.</span></div>
+      <div class="field"><label for="cf-email">Email *</label><input id="cf-email" name="email" type="email" autocomplete="email"><span class="err">Please enter a valid email address.</span></div>
+    </div>
+    <div class="f-row">
+      <div class="field"><label for="cf-phone">Phone</label><input id="cf-phone" name="phone" type="tel" autocomplete="tel"></div>
+      <div class="field"><label for="cf-org">Organisation</label><input id="cf-org" name="org" type="text"></div>
+    </div>
+    <div class="field"><label for="cf-int">Area of interest</label>
+      <select id="cf-int" name="interest">
+        <option>General inquiry</option><option>Consulting Services</option><option>Projects &amp; Engineering</option>
+        <option>Facility Management</option><option>Healthcare Solutions</option><option>Marketing &amp; Branding</option>
+        <option>Outsourcing Services</option><option>Sustainability</option>
+      </select>
+    </div>
+    <div class="field"><label for="cf-msg">Message</label><textarea id="cf-msg" name="msg" rows="3" placeholder="Tell us briefly about your project or objective…"></textarea></div>
+    <button class="btn btn-solid btn-block" type="submit"><span class="bl"><span>Submit Request</span><span>Submit Request</span></span><i data-lucide="arrow-right"></i></button>
+    <p class="m-note">Prefer email? Write to <a href="mailto:info@avcados.org">info@avcados.org</a></p>
+  </form>`;
+}
+ $$('.js-consult').forEach(b=>b.addEventListener('click',e=>{
+  e.preventDefault();
+  openModal(consultHTML());
+  const f=$('#consultForm');
+  f.addEventListener('submit',ev=>{
+    ev.preventDefault();
+    let ok=true;
+    const mark=(el,valid)=>{el.closest('.field').classList.toggle('invalid',!valid);if(!valid)ok=false;};
+    mark(f.elements.name,f.elements.name.value.trim().length>1);
+    mark(f.elements.email,/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.elements.email.value.trim()));
+    if(!ok)return;
+    const btn=f.querySelector('button[type=submit]');
+    btn.classList.add('busy');
+    btn.querySelectorAll('.bl span').forEach(s=>s.textContent='Sending…');
+    const first=f.elements.name.value.trim().split(' ')[0];
+    setTimeout(()=>{
+      mBody.innerHTML=`<div class="m-success"><span class="ok-ic"><i data-lucide="check"></i></span><h3>Request received.</h3><p>Thank you, ${first}. Our consulting team will reach out within one business day.</p></div>`;
+      lucide.createIcons();
+      setTimeout(()=>{closeModal();toast('Your consultation request has been sent.');},1900);
+    },1000);
+  });
+}));
+
+/* ---------- insights: single latest article + two tabs ---------- */
+const ARTICLES=[
+ {id:1,tag:'Insight',date:'Mar 2025',read:'6 min read',img:'photo-1454165804606-c3d57bc86b40',
+  title:'The Integrated Advantage: Why Execution-Led Consulting Wins',
+  excerpt:'Recommendations are cheap. What separates transformation from shelfware is the operating model behind the advice.',
+  body:[
+   'Most organizations don\u2019t fail for lack of good advice. They fail because the advice lives in one building while execution lives in another — a consultant recommends, an engineer builds, a facilities team operates, and no single party owns the outcome.',
+   'The integrated model changes the economics of transformation. When the team that diagnoses a problem also plans the capital works, manages the vendors and runs the resulting operation, accountability stops being a contract clause and becomes a working method.',
+   'In our engagements, that means one governance spine from discovery through optimization: a single plan of record, shared metrics, and leadership that stays with the project long after the last invoice is settled.']},
+ {id:2,tag:'Case Study',date:'Feb 2025',read:'4 min read',img:'photo-1503387762-592deb58ef4e',
+  title:'From Advisory to Handover: Governing a Corporate Fit-Out End-to-End',
+  excerpt:'Fit-outs don\u2019t fail at design. They fail in the gaps between design, execution and operations.',
+  body:[
+   'Corporate fit-outs rarely fail at the design stage. They fail in the gaps — between consultant drawings and site execution, between budgets approved and variations approved, between practical completion and operational readiness.',
+   'A PMC-led governance structure closes those gaps with discipline: a single integrated schedule, value engineering before commitments are made, vendor performance managed against milestones rather than meetings, and compliance documented as the project progresses rather than reconstructed afterwards.',
+   'The result our clients care about isn\u2019t the report at handover. It\u2019s walking into a facility on day one that already works — systems commissioned, teams trained, and costs that match the number the board approved.']},
+ {id:3,tag:'Insight',date:'Jan 2025',read:'5 min read',img:'photo-1519494026892-80bbd2d6fd0d',
+  title:'The First 90 Days: Setting Up a Hospital for Operational Success',
+  excerpt:'Operational trajectory is set in the first ninety days — long before the marketing begins.',
+  body:[
+   'A hospital\u2019s trajectory is set remarkably early. The first ninety days of operations determine clinical workflows, staffing rhythms, patient experience and the cost structure the institution will spend years optimizing against.',
+   'We advise owners and operators to treat commissioning as a clinical process, not a construction milestone: credentialing and recruitment planned backwards from opening day, SOPs rehearsed before the first patient walks in, and revenue-cycle processes tested under realistic load.',
+   'Where this discipline is applied, the difference is measurable — faster ramp-up, fewer corrective hires, and a leadership team that spends its first quarter improving the model instead of firefighting it.']}
+];
+const insGrid=$('#insGrid');
+let insFilter='Insight';
+function currentArticle(){return ARTICLES.filter(a=>a.tag===insFilter)[0];}
+function renderInsights(){
+  const a=currentArticle();
+  insGrid.innerHTML=`
+   <article class="card feat" data-id="${a.id}" tabindex="0">
+     <div class="card-img duo"><img loading="lazy" src="https://images.unsplash.com/${a.img}?auto=format&fit=crop&w=1400&q=80" alt=""></div>
+     <div class="card-body">
+       <div class="meta"><span class="tag ${a.tag==='Case Study'?'cs':''}">${a.tag}</span><span>${a.date}</span><span>${a.read}</span><span class="latest">✦ Latest</span></div>
+       <h3>${a.title}</h3>
+       <p class="ex">${a.excerpt}</p>
+       <span class="read">Read article <i data-lucide="arrow-up-right"></i></span>
+     </div>
+   </article>`;
+  lucide.createIcons();
+  const c=$('.card',insGrid);
+  c.addEventListener('click',()=>openArticle(a.id));
+  c.addEventListener('keydown',e=>{if(e.key==='Enter')openArticle(a.id)});
+}
+ $$('.chip').forEach(ch=>ch.addEventListener('click',()=>{
+  $$('.chip').forEach(c=>c.classList.toggle('on',c===ch));
+  insFilter=ch.dataset.f;
+  renderInsights();
+}));
+function openArticle(id){
+  const a=ARTICLES.find(x=>x.id===id);
+  openModal(`<div class="reader">
+    <div class="meta"><span class="tag ${a.tag==='Case Study'?'cs':''}">${a.tag}</span><span>${a.date}</span><span>${a.read}</span></div>
+    <h3>${a.title}</h3>
+    ${a.body.map(p=>`<p>${p}</p>`).join('')}
+    <div class="reader-foot">✦ &nbsp;AVCADO'S Insights &amp; Knowledge</div>
+  </div>`);
+}
+ $('#readArticle').addEventListener('click',e=>{e.preventDefault();openArticle(currentArticle().id);});
+renderInsights();
+
+/* ---------- back to top ---------- */
+const toTop=$('#toTop');
+addEventListener('scroll',()=>toTop.classList.toggle('show',scrollY>900),{passive:true});
+toTop.addEventListener('click',()=>scrollTo({top:0,behavior:'smooth'}));
+</script>
+</body>
+</html>
