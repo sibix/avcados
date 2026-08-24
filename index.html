@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-	<link rel="icon" href="https://www.avcados.org/wp-content/uploads/2020/03/cropped-Site-Icon-1-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://www.avcados.org/wp-content/uploads/2020/03/cropped-Site-Icon-1-32x32.png" sizes="32x32" />
 <script src="https://unpkg.com/lucide@latest"></script>
 <style>
 
@@ -571,16 +571,49 @@ footer{background:#04170F;color:rgba(255,255,255,.72)}
 }
 /* Master button radius — change once, updates everything */
 .btn,.chip,.v-btn,.cap-arrow,.h-arrow,.h-ic,.mc-ic,.mp-a,.burger,.mm-close,.modal-close,#toTop,.suc-item .ic,.field input,.field select,.field textarea{border-radius:6px}
+
+/* mobile gate */
+.mobile-gate{display:none}
+@media (max-width:1024px){
+  body{overflow:hidden!important;height:100vh!important}
+  body>*:not(.mobile-gate){display:none!important}
+  .mobile-gate{display:flex!important;position:fixed;inset:0;z-index:9999;background:#06231A;color:#fff;align-items:center;justify-content:center;padding:32px;text-align:center}
+  .mg-inner{max-width:430px;display:flex;flex-direction:column;align-items:center;gap:20px}
+  .mg-logo{display:inline-flex;align-items:center;font:800 22px 'Inter',sans-serif;letter-spacing:.01em;color:#fff}
+  .mg-logo .mg-avo{width:16px;height:21px;margin:0 1px}
+  .mg-icon{width:88px;height:88px;border-radius:50%;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.04);display:grid;place-items:center;color:#C8DE6A}
+  .mg-icon svg{width:36px;height:36px}
+  .mg-title{font:600 1.6rem/1.15 'Inter',sans-serif;letter-spacing:-.02em;margin:0}
+  .mg-text{font:400 15px/1.65 'Inter',sans-serif;color:rgba(255,255,255,.78);margin:0}
+  .mg-contact{display:inline-flex;align-items:center;gap:8px;font:600 12px 'Inter',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#C8DE6A;border:1px solid rgba(200,222,106,.5);border-radius:10px;padding:12px 22px;text-decoration:none;transition:.3s}
+  .mg-contact:hover{background:#C8DE6A;color:#06231A}
+  .mg-note{font:500 10px 'IBM Plex Mono',monospace;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-top:6px}
+}
+
+
 </style>
 </head>
 <body>
+
+  <div class="mobile-gate" aria-hidden="true">
+  <div class="mg-inner">
+    <div class="mg-logo">AVCAD<svg class="mg-avo" viewBox="0 0 32 42" aria-hidden="true"><defs><linearGradient id="mgavo" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2F9B6E"/><stop offset="1" stop-color="#0E3B2C"/></linearGradient></defs><path d="M16 1C9.5 1 5.5 8.2 5.5 16.5 5.5 28.2 10 41 16 41s10.5-12.8 10.5-24.5C26.5 8.2 22.5 1 16 1Z" fill="url(#mgavo)"/><path d="M16 6.2c-4.5 0-7.4 5.5-7.4 12 0 8.6 3.1 17.6 7.4 17.6s7.4-9 7.4-17.6c0-6.5-2.9-12-7.4-12Z" fill="#C8DE6A"/><circle cx="16" cy="24.5" r="4.8" fill="#155A41"/></svg>&rsquo;S</div>
+    <div class="mg-icon"><i data-lucide="monitor"></i></div>
+    <h2 class="mg-title">View from Desktop</h2>
+    <p class="mg-text">The AVCADO'S website is currently optimized for desktop browsing while we finish our mobile experience. Please open this page on a laptop or desktop computer.</p>
+    <!-- <a class="mg-contact" href="mailto:info@avocados.in">Reach us by email</a> -->
+    <p class="mg-note">✦ &nbsp;AVCADO'S — Multidisciplinary Consulting</p>
+  </div>
+</div>
+
+
 <!-- <a class="skip" href="#about">Skip to content</a> -->
 
 <!-- Utility top bar -->
 <div class="topbar">
   <div class="container topbar-in">
     <div class="grp offices">
-      <span><i data-lucide="map-pin"></i>India Office&nbsp;&nbsp;·&nbsp;&nbsp;UAE Office</span>
+      <span><i data-lucide="map-pin"></i>India &nbsp;&nbsp;·&nbsp;&nbsp;UAE&nbsp;&nbsp;·&nbsp;&nbsp;London </span>
     </div>
     <div class="grp">
       <a href="tel:+918129626921"><i data-lucide="phone"></i>+91 81296 26921</a>
@@ -720,7 +753,7 @@ footer{background:#04170F;color:rgba(255,255,255,.72)}
 <!-- Mobile drawer -->
 <div class="mm" id="mobileMenu" aria-hidden="true">
   <div class="mm-head">
-    <span class="mm-title">✦ &nbsp;AVCADO'S — Menu</span>
+    <span class="mm-title">✦ &nbsp;AVCADO'S</span>
     <button class="mm-close" aria-label="Close menu"><i data-lucide="x"></i></button>
   </div>
   <nav class="mm-nav" aria-label="Mobile">
@@ -791,7 +824,7 @@ footer{background:#04170F;color:rgba(255,255,255,.72)}
     <a class="mm-link" href="contact.html">Contact Us</a>
   </nav>
   <div class="mm-foot">
-    <span>India Office · UAE Office</span>
+    <span>India · UAE · London </span>
     <span>+91 81296 26921&nbsp;&nbsp;·&nbsp;&nbsp;info@avcados.org</span>
     <a href="#" class="btn btn-accent btn-sm js-consult"><span class="bl"><span>Book a Consultation</span><span>Book a Consultation</span></span><i data-lucide="arrow-right"></i></a>
   </div>
@@ -803,7 +836,7 @@ footer{background:#04170F;color:rgba(255,255,255,.72)}
   <div class="hero-bg"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80" alt="Modern corporate infrastructure"></div>
   <div class="hero-noise"></div>
   <div class="container hero-inner">
-    <p class="eyebrow">Consulting · PMC · Engineering · Healthcare · Facility Management</p>
+    <!-- <p class="eyebrow">Consulting · PMC · Engineering · Healthcare · Facility Management</p> -->
     <h1 class="hero-title">
       <span class="h-line"><span>Transforming Businesses.</span></span>
       <span class="h-line"><span>Building Infrastructure.</span></span>
@@ -1273,7 +1306,7 @@ footer{background:#04170F;color:rgba(255,255,255,.72)}
       <a href="contact.html" class="btn btn-ghost-l"><span class="bl"><span>Contact Us</span><span>Contact Us</span></span><i data-lucide="mail"></i></a>
     </div>
     <div class="cta-contacts" data-reveal style="--d:.25s">
-      <div class="ctc"><i data-lucide="map-pin"></i><span><i>Offices</i><b>India Office&nbsp;&nbsp;·&nbsp;&nbsp;UAE Office</b></span></div>
+      <div class="ctc"><i data-lucide="map-pin"></i><span><i>Offices</i><b>India &nbsp;&nbsp;·&nbsp;&nbsp;UAE &nbsp;&nbsp;·&nbsp;&nbsp;London </b></span></div>
       <div class="ctc"><i data-lucide="phone"></i><span><i>Phone</i><b><a href="tel:+910000000000">+91 XXXXX XXXXX</a></b></span></div>
       <div class="ctc"><i data-lucide="mail"></i><span><i>Email</i><b><a href="mailto:info@avcados.org">info@avcados.org</a></b></span></div>
     </div>
@@ -1296,8 +1329,8 @@ footer{background:#04170F;color:rgba(255,255,255,.72)}
         <p>A multidisciplinary consulting, project management, engineering, healthcare and facility management organization serving clients across India and the UAE.</p>
         <div class="foot-quick">
           <b>✦ &nbsp;Contact</b>
-          India Office · UAE Office<br>
-          <a href="tel:+910000000000">+91 XXXXX XXXXX</a> · <a href="mailto:info@avcados.org">info@avcados.org</a>
+          India  · UAE · London<br>
+          <a href="tel:+918129626921">+91 81296 26921</a> · <a href="mailto:info@avcados.org">info@avcados.org</a>
         </div>
       </div>
       <div class="foot-col">
